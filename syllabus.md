@@ -9,7 +9,9 @@ description: Course Syllabus
 
 ## PDF
 A PDF of the syllabus is available [here](/assets/syllabus/syllabus-fa26.pdf).
-<!-- TODO (FA26): upload assets/syllabus/syllabus-fa26.pdf; the FA25 PDF is still in this folder. -->
+<!-- Built from assets/syllabus/syllabus-fa26.tex (latexmk -pdf). Remaining TODO (FA26):
+     meeting time/room, Gradescope entry code, TA, graders, office hours, and the
+     registrar-assigned project presentation slot are all still TBD in the .tex. -->
 
 ## Description
 
