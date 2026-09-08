@@ -11,4 +11,4 @@ Thu, Oct 15
 : **Formula Sheet**{: .label .label-orange}[PDF](/assets/midterm/formula-sheet.pdf)
 
 Tue, Oct 20
-: **MIDTERM EXAM**{: .label .label-red}[Available on Gradescope](#TODO-gradescope-midterm)
+: **MIDTERM EXAM**{: .label .label-red}[Available on Gradescope](https://www.gradescope.com/courses/1389916)

@@ -1,0 +1,561 @@
+\documentclass[11pt,twoside]{article}
+\usepackage{etex}
+
+\raggedbottom
+
+%geometry (sets margin) and other useful packages
+\usepackage{geometry}
+\geometry{top=1in, left=1in,right=1in,bottom=1in}
+ \usepackage{graphicx,booktabs,calc}
+ 
+\usepackage{listings}
+
+
+% Marginpar width
+%Marginpar width
+\newcommand{\pts}[1]{\marginpar{ \small\hspace{0pt} \textit{[#1]} } } 
+\setlength{\marginparwidth}{.5in}
+%\reversemarginpar
+%\setlength{\marginparsep}{.02in}
+
+ 
+%\usepackage{cmbright}lstinputlisting
+%\usepackage[T1]{pbsi}
+
+
+\usepackage{chngcntr,mathtools}
+\counterwithin{figure}{section}
+\numberwithin{equation}{section}
+
+%\usepackage{listings}
+
+%AMS-TeX packages
+\usepackage{amssymb,amsmath,amsthm} 
+\usepackage{bm}
+\usepackage[mathscr]{eucal}
+\usepackage{colortbl}
+\usepackage{color}
+
+
+\usepackage{subfigure,hyperref,enumerate,polynom,polynomial}
+\usepackage{multirow,minitoc,fancybox,array,multicol}
+
+\definecolor{slblue}{rgb}{0,.3,.62}
+\hypersetup{
+    colorlinks,%
+    citecolor=blue,%
+    filecolor=blue,%
+    linkcolor=blue,
+    urlcolor=slblue
+}
+
+%%%TIKZ
+\usepackage{tikz}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\usetikzlibrary{arrows,shapes,positioning}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shadows}
+\usetikzlibrary{patterns}
+%\usetikzlibrary{circuits.ee.IEC}
+\usetikzlibrary{decorations.text}
+% For Sagnac Picture
+\usetikzlibrary{%
+    decorations.pathreplacing,%
+    decorations.pathmorphing%
+}
+
+\tikzstyle arrowstyle=[black,scale=2]
+\tikzstyle directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
+\tikzstyle reverse directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrowreversed[arrowstyle]{stealth};}}}]
+\tikzstyle dir=[postaction={decorate,decoration={markings,
+    mark=at position .98 with {\arrow[arrowstyle]{latex}}}}]
+\tikzstyle rev dir=[postaction={decorate,decoration={markings,
+    mark=at position .98 with {\arrowreversed[arrowstyle]{latex};}}}]
+
+\usepackage{ctable}
+
+%
+%Redefining sections as problems
+%
+\makeatletter
+\newenvironment{exercise}{\@startsection 
+	{section}
+	{1}
+	{-.2em}
+	{-3.5ex plus -1ex minus -.2ex}
+    	{1.3ex plus .2ex}
+    	{\pagebreak[3]%forces pagebreak when space is small; use \eject for better results
+	\large\bf\noindent{Exercise 1.\hspace{-1.5ex} }
+	}
+	}
+	%{\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+	%\begin{center}\large\bf \ldots\ldots\ldots\end{center}}
+\makeatother
+
+%
+%Fancy-header package to modify header/page numbering 
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+%\fancyheadoffset{30pt}
+%\fancyfootoffset{30pt}
+\fancyhead[LO,RE]{\small Oke}
+\fancyhead[RO,LE]{\small Page \thepage} 
+\fancyfoot[RO,LE]{\small PS 2  } 
+\fancyfoot[LO,RE]{\small \scshape CEE 260/MIE 273} 
+\cfoot{} 
+\renewcommand{\headrulewidth}{0.1pt} 
+\renewcommand{\footrulewidth}{0.1pt}
+%\setlength\voffset{-0.25in}
+%\setlength\textheight{648pt}
+
+
+\usepackage{paralist}
+
+\newcommand{\osn}{\oldstylenums}
+\newcommand{\lt}{\left}
+\newcommand{\rt}{\right}
+\newcommand{\pt}{\phantom}
+\newcommand{\tf}{\therefore}
+\newcommand{\?}{\stackrel{?}{=}}
+\newcommand{\fr}{\frac}
+\newcommand{\dfr}{\dfrac}
+\newcommand{\ul}{\underline}
+\newcommand{\tn}{\tabularnewline}
+\newcommand{\nl}{\newline}
+\newcommand\relph[1]{\mathrel{\phantom{#1}}}
+\newcommand{\cm}{\checkmark}
+\newcommand{\ol}{\overline}
+\newcommand{\rd}{\color{red}}
+\newcommand{\bl}{\color{blue}}
+\newcommand{\pl}{\color{purple}}
+\newcommand{\og}{\color{orange!90!black}}
+\newcommand{\gr}{\color{green!40!black}}
+\newcommand{\nin}{\noindent}
+\newcommand{\la}{\lambda}
+\renewcommand{\th}{\theta}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,thick,inner sep=1pt] (char) {\small #1};}}
+
+\newcommand{\bc}{\begin{compactenum}[\quad--]}
+\newcommand{\ec}{\end{compactenum}}
+
+\newcommand{\n}{\\[2mm]}
+%% GREEK LETTERS
+\newcommand{\al}{\alpha}
+\newcommand{\gam}{\gamma}
+\newcommand{\eps}{\epsilon}
+\newcommand{\sig}{\sigma}
+
+\newcommand{\p}{\partial}
+\newcommand{\pd}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\dpd}[2]{\dfrac{\partial{#1}}{\partial{#2}}}
+\newcommand{\pdd}[2]{\frac{\partial^2{#1}}{\partial{#2}^2}}
+\newcommand{\mr}{\mathbb{R}}
+\newcommand{\xs}{x^{*}}
+\newenvironment{solution}
+{\medskip\par\quad\quad\begin{minipage}[c]{.8\textwidth}\gr}{\medskip\end{minipage}}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\lstset{language=C++,
+                basicstyle=\tiny\ttfamily,
+                keywordstyle=\color{blue}\ttfamily,
+                stringstyle=\color{red}\ttfamily,
+                commentstyle=\color{gray}\ttfamily,
+                morecomment=[l][\color{gray}]{\#}
+}
+
+
+\thispagestyle{empty}
+
+
+\nin{\LARGE Problem Set 2 {\gr  }}\hfill{\bf Prof. Oke}
+
+\medskip\hrule\medskip
+
+\nin {\small CEE 260/MIE 273: Probability \& Statistics in Civil Engineering
+\hfill\textit{ 09.11.2024}}
+
+\bigskip
+
+\nin{\it Due Tuesday, September 22, 2026 at 12:59 PM as PDF uploaded via Gradescope.
+  If it helps and if possible, you can write your responses directly on this document and upload it instead.
+  \textbf{Show as much work as possible in order to get FULL credit.}
+  There FOUR problems %with a total of 30 points available.
+}\\
+
+
+\section*{Problem 1 \textit{(5 points)}}
+
+Respond ``T'' ({\it True})  or  ``F'' (\textit{False}) to the following statements. Use the boxes provided. Each response is worth 1 point.
+
+\begin{enumerate}[\bf (i)]
+\item \hfill
+  \begin{minipage}{.1\linewidth}
+    \framebox(40,40){ \gr }
+  \end{minipage}\quad
+  \begin{minipage}{.85\linewidth}
+    An impossible event has a probability less than or equal to 0. %False
+  \end{minipage}
+%  \underline{\hspace{10ex}} %F 
+
+    \smallskip
+
+% \item \hfill
+%   \begin{minipage}{.1\linewidth}
+%     \framebox(40,40){\gr T}
+%   \end{minipage}\quad
+%   \begin{minipage}{.85\linewidth}
+%     Clustering is a supervised learning approach. %False
+%   \end{minipage}
+
+%   \smallskip
+  
+\item \hfill
+  \begin{minipage}{.1\linewidth}
+    \framebox(40,40){\gr  }
+  \end{minipage}\quad
+  \begin{minipage}{.85\linewidth}
+    A certain event is equivalent to the sample space of outcomes.
+  \end{minipage}
+
+  \smallskip
+  
+\item \hfill
+  \begin{minipage}{.1\linewidth}
+    \framebox(40,40){\gr  }
+  \end{minipage}\quad
+  \begin{minipage}{.85\linewidth}
+    If $A$ and $B$ are mutually exclusive, then $P(AB) \ne 0$.
+  \end{minipage}
+
+  \smallskip
+  
+\item \hfill
+  \begin{minipage}{.1\linewidth}
+    \framebox(40,40){\gr  }
+  \end{minipage}\quad
+  \begin{minipage}{.85\linewidth}
+    Given an event $E$, then the probability of its complement can be given as $P(\ol{E}) = 1 + P(E)$
+  \end{minipage}
+
+  \smallskip
+
+  \item \hfill
+  \begin{minipage}{.1\linewidth}
+    \framebox(40,40){\gr  }
+  \end{minipage}\quad
+  \begin{minipage}{.85\linewidth}
+    $A$ and $B$ are collectively exhaustive events. If $P(B) = 0.4$, then $P(A) = 0.6$. %{\gr (Only true if $A$ and $B$ are mutually exclusive.)}
+  \end{minipage}
+  
+%   \smallskip
+  
+% \item \hfill
+%   \begin{minipage}{.1\linewidth}
+%     \framebox(40,40){\gr  }
+%   \end{minipage}\quad
+%   \begin{minipage}{.85\linewidth}
+%     The number of ways 6 books can be arranged on a bookshelf is 720. If two of the books are identical, then the total number of distinct arrangements is 360. %{\gr The permutations are $\fr{n!}{n_{1}!}$, where $n_{1} = 2$. Thus $\fr{6!}{2} = 360$.}
+%   \end{minipage}
+  
+%   \smallskip
+  
+% \item \hfill
+%   \begin{minipage}{.1\linewidth}
+%     \framebox(40,40){\gr  }
+%   \end{minipage}\quad
+%   \begin{minipage}{.85\linewidth}
+%     The number of distinct subgroups of size $n$ that can be formed from a larger group of $m$ objects is given by $\fr{m!}{n!(n-m)!}$.
+%     %{\gr (The correct answer is $\fr{m!}{n!(m-n)!}$)}
+%   \end{minipage}
+
+%   \smallskip
+
+%   \item \hfill
+%   \begin{minipage}{.1\linewidth}
+%     \framebox(40,40){\gr  }
+%   \end{minipage}\quad
+%   \begin{minipage}{.85\linewidth}
+%     The events $E_{1}$ and $E_{2}$ are independent. If $P(E_{1}) = 0.4$ and $P(E_{1}E_{2}) = 0.04$, then $P(E_{2}) = 0.1$.
+%     %{\gr ($P(E_{2}) = P(E_{1}E_{2})/P(E_{1}) = 0.04/0.4 = 0.1$)}
+%   \end{minipage}
+  \end{enumerate}
+
+  % \smallskip
+  
+% \item \hfill
+%   \begin{minipage}{.1\linewidth}
+%     \framebox(40,40){}
+%   \end{minipage}\quad
+%   \begin{minipage}{.85\linewidth}
+%     A good clustering solution should maximize the total within-cluster variation. %False
+%   \end{minipage}
+
+\eject  
+\section*{Problem 2 \textit{(7 points)}}
+Show your work/explanations in order to receive full credit.
+Single number answers are not sufficient.
+
+\begin{enumerate}[\bf (a)]
+
+\item
+% \item
+%   \begin{minipage}{.8\linewidth}
+    License plates in a certain state consist of 3 letters followed by 3 digits.\pts{2}
+    How many different license plates can be manufactured?
+    \vspace{16ex}
+    
+\item
+  Your computer password must have only 6 characters.\pts{2} Each character can be a lowercase letter (e.g. \texttt{a}), an uppercase letter (e.g.
+  \texttt{A}) or a digit (e.g. \texttt{0}). How many valid passwords could you possibly create?
+
+  \vspace{17ex}
+  
+\item Your operating system is tightening its security protocols and asks you to update your password. \pts{3}
+  It now requires that in addition to the earlier rules, you must now have at least one uppercase letter in your computer password.
+  How many valid passwords could you possibly now create?
+
+
+\vspace{20ex}
+  
+\end{enumerate}
+
+
+
+% \item $P(A_3|E)P(E)$ \marginpar{\it[1pt]} % Bayes Theorem
+  
+%   \begin{tikzpicture}[scale=.8]
+%     \draw[thick] (-4,-4) rectangle (7,3) node[above left] {$\bm S$};
+%     \draw[thick] (1.5,0) ellipse  (4 cm and 2 cm) node[] {$\bm{E}$};
+%     \draw (-1,3) -- (0,-4);
+%     \draw (4,3) -- (4,-4);
+%     \node at (-2,-3) {$\bm{A_1}$};
+%     \node at (2,-3) {$\bm{A_2}$};
+%     \node at (5,-3) {$\bm{A_3}$};
+% %    \draw[thick] (3,0) circle (2 cm) node[right] {$\bm{E_2}$};
+%  \end{tikzpicture}
+ 
+ \section*{Problem 3 \textit{(8 points)}}
+Data collected at elementary schools in DeKalb County, GA suggest that each
+year roughly 25\% of students miss exactly one day of school, 15\% miss 2 days, and 30\% miss 3 or more days
+due to sickness.
+
+\begin{quote}
+    \subsection*{\bl Example}
+    \bl   Let $X$ be the number of school days missed in a year.
+    
+    The probability that a student chosen at random misses 2 or more days of school in a year is given by:
+    \begin{equation*}
+      P(X \ge 2) = P(X=2) + P(X \ge 3) = 0.15 + 0.30 = 0.45
+  \end{equation*}
+\end{quote}
+
+\begin{enumerate}[\bf (a)]
+\item  What is the probability that a student chosen at random does not miss any days of school due to sickness
+  this year?
+ \vspace{25ex}
+\item What is the probability that a student chosen at random misses no more than one day?
+ \vspace{25ex}
+
+\item What is the probability that a student chosen at random misses at least one day?
+ \vspace{25ex}
+
+ \item What is the probability that a student chosen at random misses one or two days of school a year?
+ \vspace{25ex}
+
+ 
+
+\end{enumerate}
+
+\section*{Problem 4 \textit{(MATLAB/Python}}
+
+(Python version to be provided before midnight on Thursday)
+\subsubsection*{ Objectives}
+\begin{itemize}\item 
+  Compute permutations and combinations
+
+\item Learn how to import datasets
+
+\item Compute probabilities
+
+\item Create descriptive plots of datasets
+
+\item Compute summary statistics 
+\end{itemize}
+
+
+\subsubsection*{Requirements}
+You must have a working installation of MATLAB, preferably the most recent
+version. Please edit and run your \texttt{.m} file in the same
+directory as the supplied data (which you will download from Moodle). This
+way, you will only need to use the filenames when loading data into MATLAB.
+
+\subsubsection*{Submission instructions}
+Use the template provided to write your code. Feel free to modify to your
+liking. Append your name (\texttt{LASTNAME\_FIRSTNAME\_}) to \texttt{HW1.m} with an underscore (deleting
+\texttt{\_template} from the filename) and then submit. Note that MATLAB
+filenames must begin with a letter and contain only letters, numbers and
+underscores. Any data or resources provided for an assignment will be available
+to the graders so you only need to upload an \texttt{.m} file.
+
+% \eject
+
+% \begin{exercise}{Tutorial}
+%   \textit{Optional}\quad If you have never used MATLAB before, visit this link:
+%   \url{https://www.mathworks.com/help/matlab/learn_matlab/desktop.html}
+%   and start with the lesson ``Desktop Basics.'' 
+ 
+% \end{exercise}
+
+
+\begin{exercise}{Summary statistics and probabilities}
+The files \texttt{2013Jan\_Baltimore\_MeanTempF.csv} and
+\texttt{2014Jan\_Baltimore\_MeanTempF.csv} (contained in the archive \texttt{HW1data.zip} contain average daily temperatures (in Fahrenheit)
+recorded in Baltimore during the months January 2013 and January 2014,
+respectively. 
+
+\begin{enumerate}[(a)]
+\item Use a built-in MATLAB function (\texttt{csvread} is a good one) to read
+  the January 2013 values into an array $X$ and the January 2014 values into an
+  array $Y$. (The first task has been completed in the template.)
+
+\item Replace \texttt{??} in line 20 with the appropriate value to find the number of days in January 2013 with an average temperature of 30F. \pts{1}
+
+\item Now uncomment the other lines to \pts{1} find the probability that the mean temperature in January 2013 was 30F and display your answer using the \texttt{fprintf} statement.
+
+\item Write \pts{1} a one line statement in your script to compute the probability that the mean temperature in January 2013 was \textit{not} 30F. 
+
+\item Display your answer to part (d) using \texttt{fprintf}. \pts{1}
+
+\item Now compute the probability that the \pts{3} mean daily temperature in January 2014 was greater than 32F but \textit{no more} than 35F. Hint: to find the number of occurrences required, use:
+  \begin{quote}
+    \texttt{nnz(Y > 32 \& Y <= 35)}
+  \end{quote}
+Display your answer using \texttt{fprintf}.
+
+
+  \item Create the following plots:
+    \begin{enumerate}[\bf (i)]
+    \item Histogram of \texttt{X} \pts{2}
+    \item Histogram of \texttt{Y} \pts{2}
+    \item Scatterplot of \texttt{Y} versus \texttt{X} \pts{2}.
+  \end{enumerate}
+  Make sure that in each plot, the $x$-axis and the $y$-axis are both labeled. Also be sure to include titles for each plot.
+  When you or the TA runs your script, all three plots must be displayed simultaneously.
+  Points will be deducted in each case where these instructions are not followed.
+  Consult \texttt{example2.m} from Module 1 for examples of creating scatterplots and labeling axes and plots. \texttt{example1.m} shows how to plot histograms.
+
+\item Use MATLAB \pts{4} to find the mean and standard deviation of the temperatures in both X and Y. Display your answers using two \texttt{fprintf} statements. (The first one has been commented out for you. Note the usage of square brackets when breaking up a long quote in MATLAB over multiple lines.)
+  \end{enumerate}
+
+% \begin{exercise}{Permutations and combinations}
+
+%   \begin{enumerate}[\bf (a)]
+%   \item Use the \texttt{perms} function to determine the number of ways you can rearrange \pts{2} the letters in the word ``MODEL''.
+%     Be sure to uncomment the \texttt{fprintf} statement so that your answer is displayed when you run your script.
+
+%   \item Now, find the number of \textit{distinct} ways you can rearrange \pts{2} the letters in the word ``LEVEL''.
+%     Again, use an \texttt{fprintf} statement to display your answer.
+%     (Hint: to find the number of unique rows in the output of \texttt{perms()}, use the following construction:
+%     \begin{quote}
+%       \texttt{size(unique(perms(`LEVEL'),"rows"))}
+%     \end{quote}
+
+%   \item Why is the answer \pts{2} in (b) different from that in (a)? Complete the \texttt{fprintf} statement given in the
+%     template to explain your reasoning briefly. 
+
+%   \item Given \pts{4} a Probability and Statistics class with 20 Civil/Environmental Engineering (CEE) majors, 10 Mechanical/Industrial Engineering (MIE) majors, and 5 students who are Other Engineering (OE) majors.
+%     How many distinct groups  can you select from this class for a national engineering competition if the rules stipulate that all teams entering the competition must have exactly 10 members with 5 CEE students, 3 MIE students and 2 OE students?
+%     Compute the answer to this problem using the \texttt{nchoosek(n,k)} function in MATLAB and \textit{display} your answer using \texttt{fprintf}.
+
+%   \end{enumerate}
+  
+% \end{exercise}
+
+
+% You are given the following probabilities of three events:
+% \begin{align*}
+%   P(A) &= 0.1 \\
+%   P(B) &= 0.1 \\
+%   P(B|A) &= 0.4 \\
+%   P(C|AB) &= 0.2 \\
+%   P(C|B) &= 0.4 
+% \end{align*}
+% Now, compute the following probabilities.
+
+% \begin{enumerate}[\bf (a)]
+% \item $P(AB)$ \pts{2}
+%  \vspace{25ex}
+ 
+
+% \item $P(A\cup B)$ \pts{2}
+%  \vspace{25ex}
+ 
+
+% \item $P(ABC)$ (Hint: this can be simplified as $P(C|AB)P(AB)$, using the multiplication rule) \pts{2}
+%  \vspace{25ex}
+ 
+
+% \eject
+% \item $P(\ol{ABC})$ \pts{2}
+
+%   % \begin{tikzpicture}[scale=.8]
+% %     \draw[thick]  (-4,-3) rectangle (7,3); % node[above left] {$\bm S$};
+% %     \draw[thick, pattern=north west lines,pattern color=green!50!black] (0,0) circle (2 cm) node[left] {$\bm{A}$};
+% %     \draw[thick,  pattern=north west lines,pattern color=green!50!black] (3,0) circle (2 cm) node[right] {$\bm{B}$};
+% %   \end{tikzpicture}
+
+% %   % \begin{tikzpicture}[scale=.8]
+% %   %   \draw[thick]  (-4,-3) rectangle (7,3); % node[above left] {$\bm S$};
+% %   %   \draw[thick] (0,0) circle (2 cm) node[left] {$\bm{A}$};
+% %   %   \draw[thick] (3,0) circle (2 cm) node[right] {$\bm{B}$};
+% %   % \end{tikzpicture}
+
+% %   \bigskip
+  
+% % \item $E_1\cap E_2$ \marginpar{\it[1]}
+  
+% %   \begin{tikzpicture}[scale=.8]
+% %     \draw[thick]  (-4,-3) rectangle (7,3); % node[above left] {$\bm S$};
+% %     \draw[thick] (0,0) circle (2 cm) node[left] {$\bm{E_1}$};
+% %     \draw[thick] (3,0) circle (2 cm) node[right] {$\bm{E_2}$};
+
+% %     \begin{scope}
+% %       \clip (0,0) circle (2 cm) node[left] {$\bm{E_1}$};
+% %       \fill[ pattern=north west lines,pattern color=green!50!black](3,0) circle (2 cm) node[right] {$\bm{E_2}$};
+% %     \end{scope}
+% %   \end{tikzpicture}
+
+
+   
+ 
+%   % \begin{tikzpicture}[scale=.8]
+%   %   \draw[thick]  (-4,-5.5) rectangle (7,3); % node[above left] {$\bm S$};
+%   %   \draw[thick] (0,0) circle (2 cm) node[left] {$\bm{A}$};
+%   %   \draw[thick] (3,0) circle (2 cm) node[right] {$\bm{B}$};
+%   %   \draw[thick] (1.5,-2.6) circle (2 cm) node[] {$\bm{C}$};
+
+%   % \end{tikzpicture}
+  
+% \end{enumerate}
+    
+    
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

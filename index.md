@@ -10,9 +10,9 @@ description: Listing of course modules and topics.
 ## UMass Amherst, Fall 2026
 
 {: .mb-2 .fs-6 .text-grey-dk-000 style="margin-top: 0;"  }
-[Canvas](#TODO-canvas){:target="_blank" .btn .btn-canvas .mr-1 }
-[Lecture Videos](#TODO-echo360){:target="_blank" .btn .btn-echo360 .mr-1 }
-[Gradescope](#TODO-gradescope){:target="_blank" .btn .btn-gradescope .mr-1 }
+[Canvas](https://umamherst.instructure.com/courses/42166){:target="_blank" .btn .btn-canvas .mr-1 }
+[Lecture Videos](https://echo360.org/section/256348a2-47d5-4010-a169-3dbb36b22d6d/home){:target="_blank" .btn .btn-echo360 .mr-1 }
+[Gradescope](https://www.gradescope.com/courses/1389916){:target="_blank" .btn .btn-gradescope .mr-1 }
 [Overleaf/LaTeX](#TODO-overleaf){:target="_blank" .btn .btn-overleaf .mr-1 }
 [Datahub](#TODO-datahub){:target="_blank" .btn .btn-datahub .mr-1 }
 [LAB Solutions](#TODO-lab-solutions){:target="_blank" .btn .btn-labsolution .mr-1 }

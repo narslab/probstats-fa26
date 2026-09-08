@@ -9,13 +9,13 @@ Tue, Sep 29
 
 Thu, Oct 1
 : **LECTURE 3B**{: .label .label-blue }[Normal Distribution](/assets/lectures/M3-Probability-Distributions/M3b-Normal-Distribution-Handout.pdf)
-: **ACTIVITY 3B**{: .label .label-activity}[Empirical Rule](#TODO-canvas-tool)
+: **ACTIVITY 3B**{: .label .label-activity}[Empirical Rule](https://umamherst.instructure.com/courses/42166)
 : **NOTEBOOK 3B**{: .label .label-notebook}[Computing Normal Probabilities](https://colab.research.google.com/drive/1q6dtsA78AEVC3ujC3RjxmcmNC6HgYAkP?authuser=1#scrollTo=sLsHqFhtBb8S)  
 
 Tue, Oct 6
 : **LECTURE 3C**{: .label .label-blue }[Lognormal and Exponential Distributions](/assets/lectures/M3-Probability-Distributions/M3c-Lognormal-Exponential-Distributions-Handout.pdf)
 : **PROBLEM SET 5**{: .label .label-red}[PDF](/assets/problem-sets/PS5.pdf), [LaTeX](/assets/problem-sets/PS5.tex)  **(Due 10/13)** 
-: **LAB 5**{: .label .label-orange}[Lognormal and Exponential Distributions](https://colab.research.google.com/drive/1727IqavDdQUcwwVdrBBS1jgLWVCR69pc?usp=sharing) **(Due 10/15)**
+: **LAB 5**{: .label .label-orange}[Lognormal and Exponential Distributions](https://colab.research.google.com/drive/1727IqavDdQUcwwVdrBBS1jgLWVCR69pc?usp=sharing) **(Due 10/13)**
 : **ACTIVITY 3C**{: .label .label-activity}[Student Arrival Intervals](https://colab.research.google.com/drive/1qAR-O-jzhGqhWsheHCweYirYtyoVaSb6?usp=sharing), [Sentence Word Lengths](https://colab.research.google.com/drive/1zMYw05o2TYaS5JZ9mu-h-jSQvnEPH-ce?usp=sharing)
 
 
