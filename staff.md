@@ -29,7 +29,7 @@ description: A listing of all the course staff members.
 {% assign graders = site.staffers | where: 'role', 'Grader' %}
 {% assign num_graders = graders | size %}
 {% if num_graders != 0 %}
-## Graders
+## Grader{% if num_graders != 1 %}s{% endif %}
 
 {% for staffer in graders %}
 {{ staffer }}
