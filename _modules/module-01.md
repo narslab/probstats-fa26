@@ -5,12 +5,14 @@ title: Module 1 Introduction
 Tue, Sep 8
 : **LECTURE 1A**{: .label .label-blue }[Data and Sampling](/assets/lectures/M1-Introduction/M1a-Data-and-Sampling.pdf)
   :  
-: **Activity  1A**{: .label .label-activity}[Data About Us](https://docs.google.com/forms/d/1hKVRNdPbQhmPcyREAwxOc8oibnRKcrvIUR0zJ0u69Ms/view#responses); [Prompt](https://claude.ai/public/artifacts/f14a137d-0c98-4ea0-817d-1680398fb28e)
+: **Activity  1A**{: .label .label-activity}[Data About Us](https://forms.gle/dV7s3xSkGEBpxQ4A9)
+<!-- ; [Prompt](https://claude.ai/public/artifacts/f14a137d-0c98-4ea0-817d-1680398fb28e) -->
+: **PS 1**{: .label .label-red}[PDF](/assets/problem-sets/PS1.pdf), [LaTeX](/assets/problem-sets/PS1.tex)  **(Due 9/15)** 
+: **LAB 1**{: .label .label-orange}[Histograms and Centrality Measures](https://colab.research.google.com/drive/1ZacraowFAhAbPj4uYPhnFM4_PSpCIAWS?usp=sharing) **(Due 9/15)**
+
 
 Thu, Sep 10
 : **LECTURE 1B**{: .label .label-blue }[Summarizing Data](/assets/lectures/M1-Introduction/M1b-Summarizing-Data.pdf) *(no in-person class)*
-: **PROBLEM SET 1**{: .label .label-red}[Problem Set 1](#TODO-overleaf)  **(Due 9/15)** 
-: **LAB 1**{: .label .label-orange}[*FORTHCOMING*](#) **(Due 9/15)**
 : **Activity 1B**{: .label .label-activity}[Blind Stork Test](https://docs.google.com/spreadsheets/d/1WpLkO4iG7PC95OW6eJYPtO_7THV4XmRSHL_FJpJd_Sg/view?usp=sharing); [Prompt](https://claude.ai/public/artifacts/68d66189-91c4-4eed-9b77-b722326c5a17) 
   
 
