@@ -1,27 +1,22 @@
 ---
 title: Module 4 Inference Foundations
 ---
-Thu, Oct 16
+Thu, Oct 22
 : **LECTURE 4A-i**{: .label .label-blue }[Point Estimates and Sampling Variability](/assets/lectures/M4-Inference-Foundations/M4a-Point-Estimates-Sampling-Variability-Handout.pdf)
-  :  [Echo360 Video](https://echo360.org/lesson/G_cfa36933-c0df-42df-a2b7-d31e4be7f9a2_47c3b0d1-758e-4090-99ce-7fc3cdd96573_2025-10-16T13:00:00.000_2025-10-16T14:15:00.000/classroom)
 : **ACTIVITY 4A**{: .label .label-activity}[*FORTHCOMING*](#)
 
-Tue, Oct 21
+Tue, Oct 27
 : **LECTURE 4A-ii**{: .label .label-blue }[Point Estimates and Sampling Variability (cont)](/assets/lectures/M4-Inference-Foundations/M4a-Point-Estimates-Sampling-Variability-Handout.pdf)
-  :  [Echo360 Video](https://echo360.org/lesson/G_cfa36933-c0df-42df-a2b7-d31e4be7f9a2_47c3b0d1-758e-4090-99ce-7fc3cdd96573_2025-10-21T13:00:00.000_2025-10-21T14:15:00.000/classroom)
 : **ACTIVITY 4A**{: .label .label-activity}[*FORTHCOMING*](#)
 
-Thu, Oct 23
+Thu, Oct 29
 : **LECTURE 4B**{: .label .label-blue }[Confidence Intervals for a Proportion](/assets/lectures/M4-Inference-Foundations/M4b-Confidence-Intervals-for-Proportion-Handout.pdf)
-  :  [Echo360 Video](https://echo360.org/lesson/G_cfa36933-c0df-42df-a2b7-d31e4be7f9a2_47c3b0d1-758e-4090-99ce-7fc3cdd96573_2025-10-23T13:00:00.000_2025-10-23T14:15:00.000/classroom)
-: **PROBLEM SET 6**{: .label .label-red}[PDF](/assets/problem-sets/PS6.pdf), [LaTeX](/assets/problem-sets/PS6.tex)  **(Due 10/28)** 
-  : [PS 6 Solutions](#)
-: **LAB 6**{: .label .label-orange}[NO LAB 6 - you get points for this!](#) **(Due 9/30)**
+: **PROBLEM SET 6**{: .label .label-red}[PDF](/assets/problem-sets/PS6.pdf), [LaTeX](/assets/problem-sets/PS6.tex)  **(Due 11/3)** 
+: **LAB 6**{: .label .label-orange}[NO LAB 6 - you get points for this!](#) **(Due 10/6)**
 
-: **ACTIVITY 4B**{: .label .label-activity}[*FORTHCOMING*](https://umamherst.instructure.com/courses/31233/external_tools/326)
+: **ACTIVITY 4B**{: .label .label-activity}[*FORTHCOMING*](#TODO-canvas-tool)
 : **NOTEBOOK 4B**{: .label .label-notebook}[*FORTHCOMING*](https://colab.research.google.com/drive/1sBWVRilri3bHw0tmmRnyZ4ESVIOge6zg?usp=sharing)  
 
-Tue, Oct 28
+Tue, Nov 3
 : **LECTURE 4C**{: .label .label-blue }[Hypothesis Testing for a Proportion](/assets/lectures/M4-Inference-Foundations/M4c-Hypothesis-Testing-Handout.pdf)
-  :  [Echo360 Video](https://echo360.org/lesson/G_cfa36933-c0df-42df-a2b7-d31e4be7f9a2_47c3b0d1-758e-4090-99ce-7fc3cdd96573_2025-10-28T13:00:00.000_2025-10-28T14:15:00.000/classroom)
-: **ACTIVITY 4C**{: .label .label-activity}[*FORTHCOMING*](https://umamherst.instructure.com/courses/31233/external_tools/326)
+: **ACTIVITY 4C**{: .label .label-activity}[*FORTHCOMING*](#TODO-canvas-tool)

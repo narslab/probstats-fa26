@@ -8,7 +8,8 @@ description: Course Syllabus
 # Syllabus
 
 ## PDF
-A PDF of the syllabus is available [here](/assets/syllabus/syllabus-fa25.pdf).
+A PDF of the syllabus is available [here](/assets/syllabus/syllabus-fa26.pdf).
+<!-- TODO (FA26): upload assets/syllabus/syllabus-fa26.pdf; the FA25 PDF is still in this folder. -->
 
 ## Description
 

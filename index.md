@@ -7,15 +7,15 @@ description: Listing of course modules and topics.
 
 # CEE 260/MIE273\: Probability and Statistics in Engineering
 
-## UMass Amherst, Fall 2025
+## UMass Amherst, Fall 2026
 
 {: .mb-2 .fs-6 .text-grey-dk-000 style="margin-top: 0;"  }
-[Canvas](https://umamherst.instructure.com/courses/31233){:target="_blank" .btn .btn-canvas .mr-1 }
-[Lecture Videos](https://echo360.org/section/47c3b0d1-758e-4090-99ce-7fc3cdd96573/home){:target="_blank" .btn .btn-echo360 .mr-1 }
-[Gradescope](https://www.gradescope.com/courses/1113538){:target="_blank" .btn .btn-gradescope .mr-1 }
-[Overleaf/LaTeX](https://www.overleaf.com/read/trwqyfddzssz#3b9273){:target="_blank" .btn .btn-overleaf .mr-1 }
-[Datahub](https://drive.google.com/drive/u/3/folders/17sJr7sBNNpVGtcNXe6GJvJOkzU5hlLeU){:target="_blank" .btn .btn-datahub .mr-1 }
-[LAB Solutions](https://drive.google.com/drive/u/1/folders/1yd4ovyY9GLaxqVKA_ZC4RsyXq1XDAl09){:target="_blank" .btn .btn-labsolution .mr-1 }
+[Canvas](#TODO-canvas){:target="_blank" .btn .btn-canvas .mr-1 }
+[Lecture Videos](#TODO-echo360){:target="_blank" .btn .btn-echo360 .mr-1 }
+[Gradescope](#TODO-gradescope){:target="_blank" .btn .btn-gradescope .mr-1 }
+[Overleaf/LaTeX](#TODO-overleaf){:target="_blank" .btn .btn-overleaf .mr-1 }
+[Datahub](#TODO-datahub){:target="_blank" .btn .btn-datahub .mr-1 }
+[LAB Solutions](#TODO-lab-solutions){:target="_blank" .btn .btn-labsolution .mr-1 }
 
 <div>
 {% assign instructors = site.staffers | where: 'role', 'Instructor' | sort: 'order' %}

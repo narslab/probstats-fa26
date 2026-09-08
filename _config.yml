@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: CEE 260/MIE 273
-tagline: A Jekyll template for course websites
-description: A modern, highly customizable, responsive Jekyll template for course websites
+title: CEE 260/MIE 273 (Fall 2026)
+tagline: Probability and Statistics in Engineering — UMass Amherst, Fall 2026
+description: Course website for CEE 260/MIE 273, Probability and Statistics in Engineering, UMass Amherst, Fall 2026.
 author: Jimi Oke
 baseurl: '' # the subpath of your site, e.g. /blog
-url: 'https://probstats.narslab.org' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://fa26.probstats.narslab.org' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: 
   - "Gemfile"
   - "Gemfile.lock"
@@ -39,6 +39,8 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
+  All Offerings:
+    - 'https://probstats.narslab.org'
   Jimi Oke:
     - 'https://people.umass.edu/jimi'
   NARS Lab:
