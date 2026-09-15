@@ -10,7 +10,7 @@ Tue, Sep 29
 Thu, Oct 1
 : **LECTURE 3B**{: .label .label-blue }[Normal Distribution](/assets/lectures/M3-Probability-Distributions/M3b-Normal-Distribution-Handout.pdf)
 : **ACTIVITY 3B**{: .label .label-activity}[Empirical Rule](https://umamherst.instructure.com/courses/42166)
-: **NOTEBOOK 3B**{: .label .label-notebook}[Computing Normal Probabilities](https://colab.research.google.com/drive/1q6dtsA78AEVC3ujC3RjxmcmNC6HgYAkP?authuser=1#scrollTo=sLsHqFhtBb8S)  
+: **NOTEBOOK 3B**{: .label .label-notebook}[Computing Normal Probabilities](https://colab.research.google.com/drive/1q6dtsA78AEVC3ujC3RjxmcmNC6HgYAkP?usp=sharing#scrollTo=sLsHqFhtBb8S)  
 
 Tue, Oct 6
 : **LECTURE 3C**{: .label .label-blue }[Lognormal and Exponential Distributions](/assets/lectures/M3-Probability-Distributions/M3c-Lognormal-Exponential-Distributions-Handout.pdf)
