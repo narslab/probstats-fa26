@@ -12,7 +12,7 @@ Tue, Sep 8
 
 
 Thu, Sep 10
-: **LECTURE 1B**{: .label .label-blue }[Summarizing Data](/assets/lectures/M1-Introduction/M1b-Summarizing-Data.pdf) *(no in-person class)*
+: **LECTURE 1B**{: .label .label-blue }[Summarizing Data](/assets/lectures/M1-Introduction/M1b-Summarizing-Data-Handout.pdf) *(no in-person class)*
 : **Activity 1B**{: .label .label-activity}[Blind Stork Test](https://docs.google.com/spreadsheets/d/1WpLkO4iG7PC95OW6eJYPtO_7THV4XmRSHL_FJpJd_Sg/view?usp=sharing); [Prompt](https://claude.ai/public/artifacts/68d66189-91c4-4eed-9b77-b722326c5a17) 
   
 
