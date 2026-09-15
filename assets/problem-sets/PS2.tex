@@ -186,14 +186,14 @@
 \medskip\hrule\medskip
 
 \nin {\small CEE 260/MIE 273: Probability \& Statistics in Civil Engineering
-\hfill\textit{ 09.11.2024}}
+\hfill\textit{ 09.15.2026}}
 
 \bigskip
 
 \nin{\it Due Tuesday, September 22, 2026 at 12:59 PM as PDF uploaded via Gradescope.
   If it helps and if possible, you can write your responses directly on this document and upload it instead.
   \textbf{Show as much work as possible in order to get FULL credit.}
-  There FOUR problems %with a total of 30 points available.
+  There are 3 problems with a total of 20 points available.
 }\\
 
 
@@ -380,37 +380,6 @@ due to sickness.
 
 \end{enumerate}
 
-\section*{Problem 4 \textit{(MATLAB/Python}}
-
-(Python version to be provided before midnight on Thursday)
-\subsubsection*{ Objectives}
-\begin{itemize}\item 
-  Compute permutations and combinations
-
-\item Learn how to import datasets
-
-\item Compute probabilities
-
-\item Create descriptive plots of datasets
-
-\item Compute summary statistics 
-\end{itemize}
-
-
-\subsubsection*{Requirements}
-You must have a working installation of MATLAB, preferably the most recent
-version. Please edit and run your \texttt{.m} file in the same
-directory as the supplied data (which you will download from Moodle). This
-way, you will only need to use the filenames when loading data into MATLAB.
-
-\subsubsection*{Submission instructions}
-Use the template provided to write your code. Feel free to modify to your
-liking. Append your name (\texttt{LASTNAME\_FIRSTNAME\_}) to \texttt{HW1.m} with an underscore (deleting
-\texttt{\_template} from the filename) and then submit. Note that MATLAB
-filenames must begin with a letter and contain only letters, numbers and
-underscores. Any data or resources provided for an assignment will be available
-to the graders so you only need to upload an \texttt{.m} file.
-
 % \eject
 
 % \begin{exercise}{Tutorial}
@@ -421,45 +390,6 @@ to the graders so you only need to upload an \texttt{.m} file.
 % \end{exercise}
 
 
-\begin{exercise}{Summary statistics and probabilities}
-The files \texttt{2013Jan\_Baltimore\_MeanTempF.csv} and
-\texttt{2014Jan\_Baltimore\_MeanTempF.csv} (contained in the archive \texttt{HW1data.zip} contain average daily temperatures (in Fahrenheit)
-recorded in Baltimore during the months January 2013 and January 2014,
-respectively. 
-
-\begin{enumerate}[(a)]
-\item Use a built-in MATLAB function (\texttt{csvread} is a good one) to read
-  the January 2013 values into an array $X$ and the January 2014 values into an
-  array $Y$. (The first task has been completed in the template.)
-
-\item Replace \texttt{??} in line 20 with the appropriate value to find the number of days in January 2013 with an average temperature of 30F. \pts{1}
-
-\item Now uncomment the other lines to \pts{1} find the probability that the mean temperature in January 2013 was 30F and display your answer using the \texttt{fprintf} statement.
-
-\item Write \pts{1} a one line statement in your script to compute the probability that the mean temperature in January 2013 was \textit{not} 30F. 
-
-\item Display your answer to part (d) using \texttt{fprintf}. \pts{1}
-
-\item Now compute the probability that the \pts{3} mean daily temperature in January 2014 was greater than 32F but \textit{no more} than 35F. Hint: to find the number of occurrences required, use:
-  \begin{quote}
-    \texttt{nnz(Y > 32 \& Y <= 35)}
-  \end{quote}
-Display your answer using \texttt{fprintf}.
-
-
-  \item Create the following plots:
-    \begin{enumerate}[\bf (i)]
-    \item Histogram of \texttt{X} \pts{2}
-    \item Histogram of \texttt{Y} \pts{2}
-    \item Scatterplot of \texttt{Y} versus \texttt{X} \pts{2}.
-  \end{enumerate}
-  Make sure that in each plot, the $x$-axis and the $y$-axis are both labeled. Also be sure to include titles for each plot.
-  When you or the TA runs your script, all three plots must be displayed simultaneously.
-  Points will be deducted in each case where these instructions are not followed.
-  Consult \texttt{example2.m} from Module 1 for examples of creating scatterplots and labeling axes and plots. \texttt{example1.m} shows how to plot histograms.
-
-\item Use MATLAB \pts{4} to find the mean and standard deviation of the temperatures in both X and Y. Display your answers using two \texttt{fprintf} statements. (The first one has been commented out for you. Note the usage of square brackets when breaking up a long quote in MATLAB over multiple lines.)
-  \end{enumerate}
 
 % \begin{exercise}{Permutations and combinations}
 
