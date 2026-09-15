@@ -1,14 +1,20 @@
-% \def\bmode{1} % Mode 0 for presentation, mode 1 (or not 0) for a handout.
-% \if 0\bmode
-% 	\documentclass[smaller]{beamer}
-% \else
-% 	\documentclass[smaller,handout]{beamer}
-% 	\usepackage{handoutWithNotes}
-% 	\pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm] 
-% \fi
+\def\bmode{0} % Mode 0 for presentation, mode 1 for a handout with notes, mode 2 for handout without notes
+\if 0\bmode
+\documentclass[smaller]{beamer}
+\else \if 1\bmode
+\immediate\write18{pdflatex -jobname=\jobname-Notes-Handout\space\jobname}
+\documentclass[smaller,handout]{beamer}
+\usepackage{handoutWithNotes}
+\pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
+\else \if 2\bmode
+\immediate\write18{pdflatex -jobname=\jobname-Handout\space\jobname}
+\documentclass[smaller,handout]{beamer}
+\fi
+\fi
+\fi
 
-\documentclass[smaller,handout
-]{beamer}
+% \documentclass[smaller,handout
+% ]{beamer}
 %\usepackage{handoutWithNotes}
 %\pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
 
@@ -351,11 +357,14 @@ M1c: Case studies and experiments}\date[\today]{\footnotesize \today}
 % \end{frame}
 
 \begin{frame}
-  \frametitle{Your expectations (Fall 2025)}
+  \frametitle{Their expectations (Fall 2025)}
   \includegraphics[width=\textwidth]{wordcloud2025}
 \end{frame}
 
-
+\begin{frame}
+  \frametitle{Your expectations (Fall 2026)}
+  \includegraphics[width=\textwidth]{wordcloud-fa26}
+\end{frame}
 
 
 \section{Recap: Quantiles and boxplots}
@@ -473,7 +482,6 @@ M1c: Case studies and experiments}\date[\today]{\footnotesize \today}
   \bigskip
 
   
-  For an introduction, visit: \url{https://www.mathworks.com/help/matlab/getting-started-with-matlab.html}.
 \end{frame}
 
 \begin{frame}
@@ -485,7 +493,7 @@ M1c: Case studies and experiments}\date[\today]{\footnotesize \today}
   \pause
 
   \begin{itemize}
-  \item \texttt{m1-blind-stork.ipynb} \url{https://colab.research.google.com/drive/1G2_UPPli1rdfWv_9wRJvT-m2kLwg3GFu?usp=sharing}
+  \item \texttt{m1-blind-stork.ipynb} \url{https://colab.research.google.com/drive/1dhNi0bMTEtlWCozepK24Qk2LElJLtZSt?usp=sharing}
     
   \item \texttt{m1-usa-housing.ipynb} \url{https://colab.research.google.com/drive/1onpllyTzNuoO9op89WDR4ft7o_U-eJVL?usp=sharing}
   \end{itemize}

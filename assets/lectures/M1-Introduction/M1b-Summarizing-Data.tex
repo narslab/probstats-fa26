@@ -1,21 +1,23 @@
-% \def\bmode{1} % Mode 0 for presentation, mode 1 for a handout with notes, mode 2 for handout without notes
-% \if 0\bmode
-% \documentclass[usenames,dvipsnames,smaller]{beamer}
-% \else \if 1\bmode
-% \immediate\write18{pdflatex -jobname=\jobname-Handout-Notes\space\jobname}
-% \documentclass[usenames,dvipsnames,smaller,handout]{beamer}
-% \usepackage{handoutWithNotes}
-% \pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
-% \else \if 2\bmode
-% \immediate\write18{pdflatex -jobname=\jobname-Handout\space\jobname}
-% \documentclass[usenames,dvipsnames,smaller,handout]{beamer}
-% \fi
-% \fi
-% \fi
+\def\bmode{0} % Mode 0 for presentation, mode 1 for a handout with notes, mode 2 for handout without notes
+\if 0\bmode
+\documentclass[smaller]{beamer}
+\else \if 1\bmode
+\immediate\write18{pdflatex -jobname=\jobname-Notes-Handout\space\jobname}
+\documentclass[smaller,handout]{beamer}
+\usepackage{handoutWithNotes}
+\pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
+\else \if 2\bmode
+\immediate\write18{pdflatex -jobname=\jobname-Handout\space\jobname}
+\documentclass[smaller,handout]{beamer}
+\fi
+\fi
+\fi
 
 
-\documentclass[smaller,handout
-]{beamer}
+
+
+% \documentclass[smaller%,handout
+% ]{beamer}
 %\usepackage{handoutWithNotes}
 %\pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
 
@@ -279,7 +281,7 @@ eprint=false]{biblatex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[CEE 260/MIE 273 M1b: Summarizing Data]{{\normalsize CEE 260/MIE 273: Probability and Statistics in Civil Engineering} \\
-M1b: Summarizing Data}\date[September 4, 2025]{\footnotesize September 4, 2025}
+M1b: Summarizing Data}\date[September 10, 2026]{\footnotesize September 10, 2026}
 \author{{\bf Prof.\ Oke}}
 \institute[UMass Amherst]{
   \begin{tikzpicture}[baseline=(current bounding box.center)]
@@ -396,20 +398,20 @@ M1b: Summarizing Data}\date[September 4, 2025]{\footnotesize September 4, 2025}
 
 
 
-\begin{frame}
-  \frametitle{Class expectations (Fall 2020)}
-  \includegraphics[width=\textwidth]{wordcloud2020}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Class expectations (Fall 2020)}
+%   \includegraphics[width=\textwidth]{wordcloud2020}
+% \end{frame}
 
-\begin{frame}
-  \frametitle{Class expectations (Fall 2021)}
-  \includegraphics[width=\textwidth,trim={2in 2in 2in 2in},clip]{wordcloud2021}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Class expectations (Fall 2021)}
+%   \includegraphics[width=\textwidth,trim={2in 2in 2in 2in},clip]{wordcloud2021}
+% \end{frame}
 
-\begin{frame}
-  \frametitle{Class expectations (Fall 2024)}
-  \includegraphics[width=\textwidth]{wordcloud2024}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Class expectations (Fall 2024)}
+%   \includegraphics[width=\textwidth]{wordcloud2024}
+% \end{frame}
 
 
 
