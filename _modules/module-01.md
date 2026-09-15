@@ -17,7 +17,7 @@ Thu, Sep 10
   
 
 Tue, Sep 15
-: **LECTURE 1C**{: .label .label-blue }[Case Studies and Experiments](/assets/lectures/M1-Introduction/M1c-Case-Studies-Experiments.pdf)
+: **LECTURE 1C**{: .label .label-blue }[Case Studies and Experiments](/assets/lectures/M1-Introduction/M1c-Case-Studies-Experiments-Handout.pdf)
 <!-- : **Lab**{: .label .label-purple } [Intro to Java](#) -->
 : **PROBLEM SET 2**{: .label .label-red}[Overleaf](#TODO-overleaf) **(Due 9/22)**
 : **LAB 2**{: .label .label-orange}[Data Summarization and Visualization](https://colab.research.google.com/drive/171txI3o7PO3EVesVW7PI7vSWEHr5WprT?usp=sharing) **(Due 9/22)**
