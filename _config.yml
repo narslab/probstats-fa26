@@ -96,6 +96,8 @@ navigation:
     url: /
   - title: Calendar
     url: /calendar/
+  - title: Due Dates
+    url: /due-dates/
   - title: Resources
     url: /resources/
   - title: Announcements

@@ -93,7 +93,9 @@ Each lecture includes an activity to be completed individually or in groups, suc
 
 ### Problem Sets
 
-Problem sets are assigned weekly and due Tuesdays at 12:59pm via Gradescope. Solutions are posted after the due date. Some problem sets will also include a guided Python problem (Jupyter Notebook/Colab) with clear objectives. Assignments help you master key probabilistic and statistical functions in Python and practice visualization. You will submit an `.ipynb` (Jupyter Notebook/Colab) file with your responses. Follow instructions carefully for efficient and fair evaluation.
+Problem sets are assigned weekly and submitted via Gradescope. Solutions are posted after the due date. Some problem sets will also include a guided Python problem (Jupyter Notebook/Colab) with clear objectives. Assignments help you master key probabilistic and statistical functions in Python and practice visualization. You will submit an `.ipynb` (Jupyter Notebook/Colab) file with your responses. Follow instructions carefully for efficient and fair evaluation.
+
+**Due date rule:** Assignments are due at **11:59pm the day after** the date shown in the course schedule — if a date falls on a Tuesday, the actual deadline is Wednesday at 11:59pm; if Thursday, then Friday at 11:59pm. See the [Due Dates](/due-dates/) page for a complete list of deadlines.
 
 **Note:** Late problem sets will not be graded except for emergencies, illness (with proof), or prior permission for exigencies.
 
