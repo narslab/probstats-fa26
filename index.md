@@ -11,7 +11,7 @@ description: Listing of course modules and topics.
 
 {: .mb-2 .fs-6 .text-grey-dk-000 style="margin-top: 0;"  }
 [Canvas](https://umamherst.instructure.com/courses/42166){:target="_blank" .btn .btn-canvas .mr-1 }
-[Lecture Videos](https://echo360.org/section/256348a2-47d5-4010-a169-3dbb36b22d6d/home){:target="_blank" .btn .btn-echo360 .mr-1 }
+[Lecture Videos](https://echo360.org/section/087bd9e9-aae3-4f1e-a382-99af58bb8d8d/public){:target="_blank" .btn .btn-echo360 .mr-1 }
 [Gradescope](https://www.gradescope.com/courses/1389916){:target="_blank" .btn .btn-gradescope .mr-1 }
 <!-- Disabled for FA26; problem sets link their .tex directly from the module entries.
 [Overleaf/LaTeX](#TODO-overleaf){:target="_blank" .btn .btn-overleaf .mr-1 }
