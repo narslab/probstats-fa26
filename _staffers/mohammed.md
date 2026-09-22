@@ -5,7 +5,6 @@ email: mamohammed@umass.edu
 website: https://mabdalazeem.com/
 photo: mohammed.jpg
 meta:
-    Tutorial Sessions: TBD
-    Office Hours: Mon, 3:00--4:00PM, TBD
+    Office Hours: Mon, 1:00--2:00PM; Fri, 10:00--11:00AM, Sustainable Engineering Laboratories 2M40
 ---
 

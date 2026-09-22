@@ -26,7 +26,7 @@ This site was copied from `narslab/probstats-fa25`. Search the repo for
 - `_modules/module-0*.md` — Overleaf problem-set links, Canvas tool links
 - `calendar.md` — republish the Fall 2026 Outlook calendar and swap the `src`
 - `syllabus.md` — upload `assets/syllabus/syllabus-fa26.pdf`
-- `_staffers/` — office hours are `TBD`; add this term's TAs and graders
+- `_staffers/` — add this term's graders
 - **Check every date against the official UMass Fall 2026 academic calendar.**
   Dates were shifted from Fall 2025 by exactly 53 weeks, which preserves the
   Tue/Thu pattern but does *not* know about holidays or breaks.
