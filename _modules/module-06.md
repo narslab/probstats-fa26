@@ -8,8 +8,8 @@ Thu, Nov 19
 Tue, Dec 1
 : **LECTURE 6B**{: .label .label-blue }[Inference for Two Samples](/assets/lectures/M6-Inference-Numerical-Data/M6b-Inference-Two-Samples-Handout.pdf)
 : **ACTIVITY 6B**{: .label .label-activity}[iPhone vs Android Screentime](https://claude.ai/public/artifacts/a7d4e26a-1ca3-4948-a886-9262b64ad78f)
-: **PROBLEM SET 10**{: .label .label-red}[*FORTHCOMING*](#)  **(Due 12/8)** 
-: **LAB 10**{: .label .label-orange}[*FORTHCOMING*](#) **(Due 12/8)**
+: **PROBLEM SET 10**{: .label .label-red}[*FORTHCOMING*](#)  **(Due Wed 12/9)** 
+: **LAB 10**{: .label .label-orange}[*FORTHCOMING*](#) **(Due Wed 12/9)**
 
 Thu, Dec 3
 : **LECTURE 6C**{: .label .label-blue }[ANOVA](/assets/lectures/M6-Inference-Numerical-Data/M6c-ANOVA-Handout.pdf)

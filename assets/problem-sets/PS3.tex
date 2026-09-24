@@ -186,14 +186,14 @@
 \medskip\hrule\medskip
 
 \nin {\small CEE 260/MIE 273: Probability \& Statistics in Civil Engineering
-\hfill\textit{ 09.16.2025}}
+\hfill\textit{ 09.24.2026}}
 
 \bigskip
 
-\nin{\it Due Tuesday, September 29, 2026 at 12:59 PM as PDF and .ipynb/.m files uploaded via Gradescope.
+\nin{\it Due Wednesday, September 30, 2026 at 11:59 PM as PDF uploaded via Gradescope.
   If it helps and if possible, you can write your responses directly on this document and upload it instead.
     \textbf{Show as much work as possible in order to get FULL credit.}
-  There are 4 problems with a total of 31 points available.
+  There are 4 problems with a total of 32 points available.
 }\\
 
 
@@ -288,7 +288,8 @@ Respond ``T'' ({\it True})  or  ``F'' (\textit{False}) to the following statemen
   \end{enumerate}
 % \item \hfill
 %   \begin{minipage}{.1\linewidth}
-%     \framebox(40,40){\gr T}
+%     \framebox(40,40){\gr T}   The airline industry in a certain country is subject to labor strikes by the
+
 %   \end{minipage}\quad
 %   \begin{minipage}{.85\linewidth}
 %     The number of ways 6 books can be arranged on a bookshelf is 720. If two of the books are identical, then the total number of distinct arrangements is 360. {\gr The permutations are $\fr{n!}{n_{1}!}$, where $n_{1} = 2$. Thus $\fr{6!}{2} = 360$.}
@@ -327,34 +328,20 @@ Respond ``T'' ({\it True})  or  ``F'' (\textit{False}) to the following statemen
 
   \eject
 
-   \section*{Problem 2 \textit{(8 points)}}
-Data collected at elementary schools in DeKalb County, GA, suggest that each
-year roughly 25\% of students miss exactly one day of school, 15\% miss 2 days, and 30\% miss 3 or more days
-due to sickness.
-\vspace{-2ex}
-\begin{quote}
-    \subsubsection*{\bl Example}\small
-    \bl   Let $X$ be the number of school days missed in a year. The probability that a student chosen at random misses 2 or more days of school in a year is given by:
-    \begin{equation*}
-      P(X \ge 2) = P(X=2) + P(X \ge 3) = 0.15 + 0.30 = 0.45
-  \end{equation*}
-\end{quote}
-\begin{enumerate}[\bf (a)]
-\item  What is the probability that a student chosen at random does not miss any days of school due to sickness
-  this year?
- \vspace{18ex}
-\item What is the probability that a student chosen at random misses no more than one day?
- \vspace{20ex}
+   \section*{Problem 2 \textit{(9 points)}}
+   The airline industry in a certain country is subject to labor strikes by the
+    pilots (event $A$), mechanics (event $B$) or flight attendants (event $C$).
+    The probability of strikes by each of the individual groups in the next 3 years is given by:
+    \[P(A) = 0.03\quad P(B) = 0.05\quad P(C) = 0.06\]
+    Assuming that events $A$, $B$ and $C$ are statistically independent, find the probability that:
 
-\item What is the probability that a student chosen at random misses at least one day?
- \vspace{20ex}
-
- \item What is the probability that a student chosen at random misses one or two days of school a year?
- \vspace{25ex}
-
+    \begin{enumerate}[\bf (a)]
+    \item only pilots will strike in the next 3 years \pts{1} \vspace{25ex}
+    \item both mechanics and flight attendants will strike in the next 3 years \pts{3} \vspace{25ex}
+    \item any 2 of the 3 groups will strike in the next 3 years \pts{5} \vspace{25ex}
+    \end{enumerate}
  
 
-\end{enumerate}
 
 % \section*{Problem 2 \textit{(17 points)}}
 % For a construction project, you are given the following conditional
@@ -453,7 +440,7 @@ due to sickness.
 %   % \end{align*}
 % \end{enumerate}
 
-% \eject
+\eject
 
 \section*{Problem 3 \textit{Bayes' Theorem (8 points)}}
 Given an earthquake of intensity
@@ -506,199 +493,7 @@ Use the quantities provided and the results from Problem to answer the following
 
 \end{enumerate}
 
-% \item $P(A_3|E)P(E)$ \marginpar{\it[1pt]} % Bayes Theorem
-  
-%   \begin{tikzpicture}[scale=.8]
-%     \draw[thick] (-4,-4) rectangle (7,3) node[above left] {$\bm S$};
-%     \draw[thick] (1.5,0) ellipse  (4 cm and 2 cm) node[] {$\bm{E}$};
-%     \draw (-1,3) -- (0,-4);
-%     \draw (4,3) -- (4,-4);
-%     \node at (-2,-3) {$\bm{A_1}$};
-%     \node at (2,-3) {$\bm{A_2}$};
-%     \node at (5,-3) {$\bm{A_3}$};
-% %    \draw[thick] (3,0) circle (2 cm) node[right] {$\bm{E_2}$};
-%  \end{tikzpicture}
 
- 
-%   \begin{tikzpicture}[scale=.8]
-%     \draw[thick]  (-4,-3) rectangle (7,3); % node[above left] {$\bm S$};
-%     \draw[thick, pattern=north west lines,pattern color=green!50!black] (0,0) circle (2 cm) node[left] {$\bm{A}$};
-%     \draw[thick,  pattern=north west lines,pattern color=green!50!black] (3,0) circle (2 cm) node[right] {$\bm{B}$};
-%   \end{tikzpicture}
-
-%   % \begin{tikzpicture}[scale=.8]
-%   %   \draw[thick]  (-4,-3) rectangle (7,3); % node[above left] {$\bm S$};
-%   %   \draw[thick] (0,0) circle (2 cm) node[left] {$\bm{A}$};
-%   %   \draw[thick] (3,0) circle (2 cm) node[right] {$\bm{B}$};
-%   % \end{tikzpicture}
-
-%   \bigskip
-  
-% \item $E_1\cap E_2$ \marginpar{\it[1]}
-  
-%   \begin{tikzpicture}[scale=.8]
-%     \draw[thick]  (-4,-3) rectangle (7,3); % node[above left] {$\bm S$};
-%     \draw[thick] (0,0) circle (2 cm) node[left] {$\bm{E_1}$};
-%     \draw[thick] (3,0) circle (2 cm) node[right] {$\bm{E_2}$};
-
-%     \begin{scope}
-%       \clip (0,0) circle (2 cm) node[left] {$\bm{E_1}$};
-%       \fill[ pattern=north west lines,pattern color=green!50!black](3,0) circle (2 cm) node[right] {$\bm{E_2}$};
-%     \end{scope}
-%   \end{tikzpicture}
-
-
-   
- 
-  % \begin{tikzpicture}[scale=.8]
-  %   \draw[thick]  (-4,-5.5) rectangle (7,3); % node[above left] {$\bm S$};
-  %   \draw[thick] (0,0) circle (2 cm) node[left] {$\bm{A}$};
-  %   \draw[thick] (3,0) circle (2 cm) node[right] {$\bm{B}$};
-  %   \draw[thick] (1.5,-2.6) circle (2 cm) node[] {$\bm{C}$};
-
-  % \end{tikzpicture}
-  
-    
-
-
-
-% \eject
-% \section*{Problem 4  \textit{Summary Statistics and Probabilities (22 points)}}
-% \subsubsection*{Objectives}
-% \begin{itemize}
-% \item Learn how to import datasets
-
-% \item Compute probabilities
-
-% \item Create descriptive plots of datasets
-
-% \item Compute summary statistics 
-% \end{itemize}
-
-% \subsubsection*{Requirements}
-% You must have a working installation of Python, preferably with the most recent
-% version of Jupyter Lab/Notebook, or MATLAB.
-
-
-% \subsubsection*{Submission instructions }
-% Be sure to carefully follow the submission instructions.
-% The grader should be able to run your Jupyter Notebook and see all the required outcomes.
-% You only need to submit the \texttt{.ipynb} or \texttt{.m} file but you need to make sure that when running your notebook on your computer, the data files are in the same folder as your notebook. This way, the relative paths for the files will work when we run your notebook to grade your work.
-% Any errors in your notebook/script will result in points deducted if the required output is not visible.
-% Use the template provided to write your code. Feel free to modify it to your
-% liking.
-
-% Append your name (\texttt{LASTNAME\_FIRSTNAME\_}) to \texttt{PS4\_Prob4.ipynb} or  \texttt{PS4\_Prob4.m} with an underscore (deleting
-% \texttt{\_template} from the filename) and then submit, for example:
-% \begin{itemize}
-% \item \texttt{OKE\_JIMI\_PS4\_Prob4.ipynb} (for Python/Jupyter) 
-% \item  \texttt{OKE\_JIMI\_PS4\_Prob4.m} (for Matlab)
-% \end{itemize}
-
-% Note that MATLAB filenames must begin with a letter and contain only letters, numbers and
-% underscores.
-% Any data or resources provided for an assignment will be available
-% to the graders so you only need to upload the \texttt{.ipynb} or \texttt{.m} file.
-
-% \subsubsection*{Data}
-% The files \texttt{2013Jan\_Baltimore\_MeanTempF.csv} and
-% \texttt{2014Jan\_Baltimore\_MeanTempF.csv} (contained in the archive \texttt{PS3data.zip} contain average daily temperatures (in Fahrenheit)
-% recorded in Baltimore during the months January 2013 and January 2014,
-% respectively.
-% \bigskip
-
-
-
-% \noindent \textbf{Only complete one of the versions: Matlab OR Python, but not both.}
-% Questions on next 2 pages
-
-% \eject
-%   \subsection*{Matlab version}
-
-% \subsubsection*{Tutorial}
-%   \textit{Optional}\quad If you have never used MATLAB before, visit this link:
-%   \url{https://www.mathworks.com/help/matlab/learn_matlab/desktop.html}
-%   and start with the lesson ``Desktop Basics.'' 
- 
- 
-% \begin{enumerate}[(a)]
-% \item Use a built-in MATLAB function (\texttt{csvread} is a good one) to read
-%   the January 2013 values into an array $X$ and the January 2014 values into an
-%   array $Y$. (The first task has been completed in the template.) \pts{1}
-
-% \item Replace \texttt{??} in line 20 with the appropriate value to find the number of days in January 2013 with an average temperature of 30F. \pts{1}
-
-% \item Now uncomment the other lines to \pts{1} find the probability that the mean temperature in January 2013 was 30F and display your answer using the \texttt{fprintf} statement.
-
-% \item Write \pts{1} a one line statement in your script to compute the probability that the mean temperature in January 2013 was \textit{not} 30F and display your answer using \texttt{fprintf}. \pts{2}
-
-% \item Now compute the probability that the \pts{3} mean daily temperature in January 2014 was greater than 32F but \textit{no more} than 35F. Hint: to find the number of occurrences required, use:
-%   \begin{quote}
-%     \texttt{nnz(Y > 32 \& Y <= 35)}
-%   \end{quote}
-% Display your answer using \texttt{fprintf}.
-
-
-%   \item Create the following plots:
-%     \begin{enumerate}[\bf (i)]
-%     \item Histogram of \texttt{X} \pts{2}
-%     \item Histogram of \texttt{Y} \pts{2}
-%     \item Boxplot of \texttt{X} \pts{2}
-%     \item Boxplot of \texttt{Y} \pts{2}      
-%     \item Scatterplot of \texttt{Y} versus \texttt{X} \pts{2}.
-%   \end{enumerate}
-%   Make sure that in each plot, the $x$-axis and the $y$-axis are both labeled. Also be sure to include titles for each plot.
-%   When you or the TA runs your script, all 5 plots must be displayed simultaneously.
-%   Points will be deducted in each case where these instructions are not followed.
-%   Consult \texttt{example2.m} from Module 1 for examples of creating scatterplots and labeling axes and plots. \texttt{example1.m} shows how to plot histograms.
-
-% \item Use MATLAB \pts{4} to find the mean and standard deviation of the temperatures in both X and Y. Display your answers using two \texttt{fprintf} statements. (The first one has been commented out for you. Note the usage of square brackets when breaking up a long quote in MATLAB over multiple lines.)
-%   \end{enumerate}
-
-%   \eject
-
-%   \subsection*{Python version}
-
-% \subsubsection*{Tutorial}
-%   \textit{Optional}\quad If you have never used Python or Jupyter Notebook before, visit this link:
-%   \url{https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html} and start with the lesson ``Notebook Basics.''
- 
-
-% \subsubsection*{Questions}
-% \begin{enumerate}[(a)]
-% \item Use a  Python function (\texttt{pd.read\_csv} is a good one) to read
-%   the January 2013 values into an array $X$ and the January 2014 values into an
-%   array $Y$. (The first task has been completed in the template.) \pts{1}
-
-% \item Replace \texttt{??} with the appropriate value to find the number of days in January 2013 with an average temperature of 30F. \pts{1}
-
-% \item Now uncomment the other lines to \pts{1} find the probability that the mean temperature in January 2013 was 30F and display your answer using the \texttt{print} statement.
-
-% \item Write   a one line statement in your notebook to compute the probability that the mean temperature in January 2013 was \textit{not} 30F and display your answer using \texttt{print}. \pts{2}
-
-% \item Now compute the probability that the \pts{3} mean daily temperature in January 2014 was greater than 32F but \textit{no more} than 35F. Hint: to find the number of occurrences required, use:
-%   \begin{quote}
-%      \texttt{np.count\_nonzero((Y > 32) \& (Y <= 35))}
-%   \end{quote}
-% Display your answer using \texttt{print}.
-
-
-%   \item Create the following plots:
-%     \begin{enumerate}[\bf (i)]
-%     \item Histogram of \texttt{X} \pts{2}
-%     \item Histogram of \texttt{Y} \pts{2}
-%     \item Boxplot of \texttt{X} \pts{2}
-%     \item Boxplot of \texttt{Y} \pts{2}
-%     \item Scatterplot of \texttt{Y} versus \texttt{X} \pts{2}.
-%   \end{enumerate}
-%   Make sure that in each plot, the $x$-axis and the $y$-axis are both labeled. Also be sure to include titles for each plot.
-%   When you or the grader runs your notebook, all 5 plots must be displayed.
-%   Points will be deducted in each case where these instructions are not followed.
-%   % Consult \texttt{example2.m} from Module 1 for examples of creating scatterplots and labeling axes and plots. \texttt{example1.m} shows how to plot histograms.
-
-% \item Use Python \pts{4} to find the mean and standard deviation of the temperatures in both X and Y. Display your answers using two \texttt{print} statements. (The first one has been commented out for you.) %Note the usage of square brackets when breaking up a long quote in MATLAB over multiple lines.)
-%   \end{enumerate}
- 
 
 % \vfill
 

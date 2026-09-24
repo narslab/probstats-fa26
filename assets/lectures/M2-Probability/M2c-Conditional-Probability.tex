@@ -687,11 +687,10 @@ This means that the event to the right is what goes in the denominator.
 
     \begin{enumerate}[\bf (a)]
     \item the probability that all groups will strike in the next 3 years
-    \item     the probability of a labor strike in the airline industry in the next 3 years.
+        \item the probability that none of the groups will strike in the next 3 years
+    \item the probability of a labor strike in the airline industry in the next 3 years (i.e., that any of the groups will strike)
     \end{enumerate}
-
-    
-\end{frame}
+  \end{frame}
 
 
 \begin{frame}
@@ -709,8 +708,8 @@ This means that the event to the right is what goes in the denominator.
              &=& 0.00009 = \pause \boxed{9.0 \times 10^{-5}}
     \end{eqnarray*}
   \end{frame}
-  
-\begin{frame}
+
+  \begin{frame}
   \frametitle{Example 3: Airline industry strikes (cont.)} \pause
   
     \[P(A) = 0.03\quad P(B) = 0.05\quad P(C) = 0.06\]
@@ -719,7 +718,7 @@ This means that the event to the right is what goes in the denominator.
 
     \pause
 
-    {\bf (b) } The probability of a labor strike is the probability that any combination of the groups will strike. \pause
+    {\bf (b) } The probability that none of the 3 groups will strike in the next 3 years is given by: \pause\pause
 
     
     \begin{enumerate}[(Step 1)]
@@ -729,7 +728,66 @@ This means that the event to the right is what goes in the denominator.
       \end{equation*}
       \pause
 
-    \item Use the complement rule, de Morgan's rule and multiplication rule for statistically independent events: \pause
+    \item Use the multiplication rule for statistically independent events: \pause
+      \begin{eqnarray*}
+        P(\ol{A}\,\ol{B}\,\ol{C}) & =&  P(\ol{A})P(\ol{B})P(\ol{C}) \pause \quad \text{\og statistical independence} \\\pause                        
+                          &=&  (1-0.03)(1-0.05)(1-0.06) \\\pause
+        &=& (0.97)(0.95)(0.94) \\ \pause
+        &=& \boxed{0.866}
+      \end{eqnarray*}
+    \end{enumerate}
+    
+ \end{frame}
+
+
+
+
+\begin{frame}
+  \frametitle{Example 3: Airline industry strikes (cont.)} \pause
+  
+    \[P(A) = 0.03\quad P(B) = 0.05\quad P(C) = 0.06\]
+
+    \bigskip
+
+    \pause
+
+    {\bf (c) } The probability of a labor strike is the probability that any combination of the groups will strike. \pause
+
+
+    
+    \begin{enumerate}[(Step 1)]
+    \item Formulate the desired probability: \pause
+      \begin{equation*}
+        P(A\cup B \cup C)
+      \end{equation*}
+      \pause
+
+    \item Realize that this is simply the probability of the complement of the event in which none of the 3 groups strike, which you have already computed. Thus: \pause
+      \begin{eqnarray*}
+        P(A\cup B \cup C) & =& 1 - P(\ol{A})P(\ol{B})P(\ol{C})  \\ \pause
+                          & =& 1 - 0.866 \\ \pause
+        &=& \boxed{0.134}
+      \end{eqnarray*}
+    \end{enumerate}
+    
+ \end{frame}
+
+ \begin{frame}
+  \frametitle{Example 3: Airline industry strikes (cont.)} \pause
+
+
+    {\bf (c) } The probability of a labor strike is the probability that any combination of the groups will strike. [ALTERNATE SOLUTION using de Morgan's rule]\pause
+
+
+    
+    \begin{enumerate}[(Step 1)]
+    \item Formulate the desired probability: \pause
+      \begin{equation*}
+        P(A\cup B \cup C)
+      \end{equation*}
+      \pause
+
+    \item Realize that this is simply the probability of the complement of the event in which none of the 3 groups strike, which you have already computed. Use the complement rule, de Morgan's rule and multiplication rule for statistically independent events: \pause
       \begin{eqnarray*}
         P(A\cup B \cup C) & =& 1 - P(\ol{A\cup B \cup C}) \pause \quad \text{\og complement rule} \\ \pause
                           & =& 1 - P(\ol{A}\,\ol{B}\,\ol{C}) \pause \quad \text{\og de Morgan's rule} \\ \pause
@@ -741,9 +799,6 @@ This means that the event to the right is what goes in the denominator.
     \end{enumerate}
     
  \end{frame}
-
-
-
 \section{Theorem of total probability}
 \begin{frame}
   \frametitle{Total probability}
