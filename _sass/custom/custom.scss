@@ -79,6 +79,27 @@ $main-max-width: 1200px;
     width: $sidebar-width !important;
     min-width: 0;
     position: fixed;
+    // The theme right-aligns fixed-width (16.5rem) children at lg, which
+    // pushes them off-screen in our narrower sidebar; fill it instead.
+    align-items: stretch;
+
+    .site-nav,
+    .site-header,
+    .site-footer {
+      width: 100%;
+    }
+
+    .site-title {
+      padding-left: $sp-4;
+      padding-right: $sp-4;
+      font-size: 1rem !important;
+      line-height: 1.25;
+    }
+
+    .site-footer {
+      padding-left: $sp-4;
+      padding-right: $sp-4;
+    }
   }
 }
 
