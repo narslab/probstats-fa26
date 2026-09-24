@@ -7,11 +7,11 @@ description: Actual submission deadlines for all problem sets and labs.
 
 # Assignment Due Dates
 
-Problem sets (PS) and labs are listed in the course schedule with reference dates. **Actual deadlines are 11:59pm the following day**: reference dates on a Tuesday are due Wednesday at 11:59pm; reference dates on a Thursday are due Friday at 11:59pm.
+Problem sets (PS) and labs are listed in the course schedule (PDF) with reference dates. **Actual deadlines are 11:59pm the following day**: reference dates on a Tuesday are due Wednesday at 11:59pm; reference dates on a Thursday are due Friday at 11:59pm.
 
 All submissions are via Gradescope.
 
-| Assignment | Date in Schedule | Actual Deadline |
+| Assignment | Date in Schedule (PDF) | Actual Deadline |
 |:-----------|:----------------|:----------------|
 | PS 1  | Tue, Sep 15 | **Wed, Sep 16 — 11:59pm** |
 | LAB 1 | Tue, Sep 15 | **Wed, Sep 16 — 11:59pm** |
