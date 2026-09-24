@@ -31,9 +31,19 @@ summary {
 
 
 
+$sidebar-width: 180px;
+$main-max-width: 1200px;
+
 .main {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: $main-max-width;
+
+  // Once the sidebar is fixed (md+), keep content clear of it: shrink to the
+  // remaining width, and only center on screens wide enough to fit both.
+  @include mq(md) {
+    margin-left: unquote("max(#{$sidebar-width}, calc((100% - #{$main-max-width}) / 2))");
+    max-width: unquote("min(#{$main-max-width}, calc(100% - #{$sidebar-width}))");
+  }
 }
 
 .main-content {
@@ -63,8 +73,13 @@ summary {
 
 .side-bar {
   z-index: 100;
-  width: 180px !important;
-  position: fixed;
+
+  // Below md the theme stacks the sidebar above the content; only pin it wider.
+  @include mq(md) {
+    width: $sidebar-width !important;
+    min-width: 0;
+    position: fixed;
+  }
 }
 
 .main-content-wrap {
