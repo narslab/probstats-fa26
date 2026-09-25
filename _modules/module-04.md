@@ -20,5 +20,5 @@ Thu, Oct 29
 Thu, Nov 5
 : **LECTURE 4D**{: .label .label-blue }[Hypothesis Testing for a Proportion](/assets/lectures/M4-Inference-Foundations/M4d-Hypothesis-Testing-Handout.pdf)
 : **PROBLEM SET 7**{: .label .label-red}[PDF](/assets/problem-sets/PS7.pdf), [LaTeX](/assets/problem-sets/PS7.tex)  **(Due Thu 11/12)** 
-: **LAB 7**{: .label .label-orange}[CIs and Hypothesis Testing for a Proportion](https://colab.research.google.com/drive/1zvux7RSoAW8g_mV6inE0hytiS0EAiGSz?usp=sharing) **(Due Thu 11/12)**
+: **LAB 7**{: .label .label-orange}[*FORTHCOMING*](#) **(Due Thu 11/12)**
 : **ACTIVITY 4D**{: .label .label-activity}[*FORTHCOMING*](https://umamherst.instructure.com/courses/42166)

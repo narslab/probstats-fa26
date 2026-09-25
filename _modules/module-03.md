@@ -5,7 +5,7 @@ title: Module 3 Probability Distributions
 Tue, Sep 29
 : **LECTURE 3A**{: .label .label-blue }[Introduction: Random Variables](/assets/lectures/M3-Probability-Distributions/M3a-Random-Variables-Handout.pdf)
 : **PROBLEM SET 4**{: .label .label-red}[PDF](/assets/problem-sets/PS4.pdf), [LaTeX](/assets/problem-sets/PS4.tex)  **(Due Wed 10/7)** 
-: **LAB 4**{: .label .label-orange}[Construction Duration Analysis](https://colab.research.google.com/drive/10xTO42eiNHhDp4hN_BU8ZnZ6a5wYOozH?usp=sharing) **(Due Wed 10/7)**
+: **LAB 4**{: .label .label-orange}[*FORTHCOMING*](#) **(Due Wed 10/7)**
 
 Thu, Oct 1
 : **LECTURE 3B**{: .label .label-blue }[Normal Distribution](/assets/lectures/M3-Probability-Distributions/M3b-Normal-Distribution-Handout.pdf)
@@ -15,7 +15,7 @@ Thu, Oct 1
 Tue, Oct 6
 : **LECTURE 3C**{: .label .label-blue }[Lognormal and Exponential Distributions](/assets/lectures/M3-Probability-Distributions/M3c-Lognormal-Exponential-Distributions-Handout.pdf)
 : **PROBLEM SET 5**{: .label .label-red}[PDF](/assets/problem-sets/PS5.pdf), [LaTeX](/assets/problem-sets/PS5.tex)  **(Due Wed 10/14)** 
-: **LAB 5**{: .label .label-orange}[Lognormal and Exponential Distributions](https://colab.research.google.com/drive/1727IqavDdQUcwwVdrBBS1jgLWVCR69pc?usp=sharing) **(Due Wed 10/14)**
+: **LAB 5**{: .label .label-orange}[*FORTHCOMING*](#) **(Due Wed 10/14)**
 : **ACTIVITY 3C**{: .label .label-activity}[Student Arrival Intervals](https://colab.research.google.com/drive/1qAR-O-jzhGqhWsheHCweYirYtyoVaSb6?usp=sharing), [Sentence Word Lengths](https://colab.research.google.com/drive/1zMYw05o2TYaS5JZ9mu-h-jSQvnEPH-ce?usp=sharing)
 
 

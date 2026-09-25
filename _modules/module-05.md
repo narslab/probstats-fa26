@@ -6,7 +6,7 @@ Tue, Nov 10
 : **LECTURE 5A**{: .label .label-blue }[Inference for Single Proportion](/assets/lectures/M5-Inference-Categorical-Data/M5a-Inference-Single-Proportion_Handout.pdf)
 : **ACTIVITY 5A**{: .label .label-activity}[Hypothesis Testing](https://claude.ai/public/artifacts/8e250210-d989-4ed3-97d2-477f7494b16b) [Responses](https://docs.google.com/spreadsheets/d/1nh9almyo7gRzvdE94Ka9HPZhR5ouTWnhTnkzVvzZ8lM/edit?resourcekey=&gid=212466671#gid=212466671)
 : **PROBLEM SET 8**{: .label .label-red}[PDF](/assets/problem-sets/PS8.pdf), [LaTeX](/assets/problem-sets/PS8.tex)  **(Due Wed 11/18)** 
-: **LAB 8**{: .label .label-orange}[CIs and Hypothesis Testing for a Sample Mean](https://colab.research.google.com/drive/1Qp2umJMuqpxa7t8RMnhkZN4Kvwa93XqJ?usp=sharing#scrollTo=F1zgHNjwYP8C) **(Due Wed 11/18)**
+: **LAB 8**{: .label .label-orange}[*FORTHCOMING*](#) **(Due Wed 11/18)**
 
 
 Thu, Nov 12
