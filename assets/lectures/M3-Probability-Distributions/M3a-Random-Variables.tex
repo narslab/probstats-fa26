@@ -1,20 +1,20 @@
-% \def\bmode{2} % Mode 0 for presentation, mode 1 for a handout with notes, mode 2 fo% r handout without notes
-% \if 0\bmode
-% \documentclass[usenames,dvipsnames,smaller, hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
-% \else \if 1\bmode
-% \immediate\write18{pdflatex -jobname=\jobname-Handout-Notes\space\jobname}
-% \documentclass[usenames,dvipsnames,smaller,handout,hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
-% \usepackage{handoutWithNotes}
-% \pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
-% \else \if 2\bmode
-% \immediate\write18{pdflatex -jobname=\jobname-Handout\space\jobname}
-% \documentclass[usenames,dvipsnames,smaller,handout,hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
-% \fi
-% \fi
-% \fi
+\def\bmode{0} % Mode 0 for presentation, mode 1 for a handout with notes, mode 2 fo% r handout without notes
+\if 0\bmode
+\documentclass[usenames,dvipsnames,smaller, hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
+\else \if 1\bmode
+\immediate\write18{pdflatex -jobname=\jobname-Handout-Notes\space\jobname}
+\documentclass[usenames,dvipsnames,smaller,handout,hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
+\usepackage{handoutWithNotes}
+\pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
+\else \if 2\bmode
+\immediate\write18{pdflatex -jobname=\jobname-Handout\space\jobname}
+\documentclass[usenames,dvipsnames,smaller,handout,hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
+\fi
+\fi
+\fi
 
-\documentclass[usenames,dvipsnames,smaller,
- hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
+% \documentclass[usenames,dvipsnames,smaller,
+%  hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
 % \documentclass[smaller,handout
 % ]{beamer}
 %\usepackage{etex}
@@ -37,7 +37,7 @@
 eprint=false]{biblatex}
 \addbibresource{bib/references.bib}
 \AtEveryCitekey{\iffootnote{{\tiny}\tiny}{\tiny}}
-
+\usepackage[cal=dutchcal]{mathalfa}
 %\usepackage{pgfpages}
 %\setbeameroption{hide notes} % Only slides
 %\setbeameroption{show only notes} % Only notes
@@ -551,17 +551,19 @@ Lecture 3a: Introduction: Random variables}
 
   \begin{equation}
     \label{eq:12}
-    p_X(x_i) \equiv P(X = x_i) \quad \forall x
+    p_X(\mathcal{x}_i) \equiv P(X = \mathcal{x}_i) \quad \forall \mathcal{x}
   \end{equation}
 
+  \alert{\small Note that the symbol $\forall$ means ``for all''}
   \pause
   
-  \begin{alertblock}{CDF of discrete random variable}
+  \begin{alertblock}{Cumulative distribution function (CDF) of discrete random variable}
     \pause
     \begin{eqnarray*}
       \label{eq:14}
-      F_X(x) &=&\sum_{x_i \le x} P(X = x_i)\\
-             &=&\sum_{x_i \le x}p_X(x_i)
+      F_X(\mathcal{x}) &=&P(X\le \mathcal{x}) \\\pause
+             &=&\sum_{\mathcal{x}_i \le x} P(X = \mathcal{x}_i)\\\pause
+             &=&\sum_{\mathcal{x}_i \le x}p_X(\mathcal{x}_i)
     \end{eqnarray*}
   \end{alertblock}
   \end{minipage}\qquad
@@ -577,31 +579,22 @@ Lecture 3a: Introduction: Random variables}
 \begin{frame}
   \frametitle{Probability density function (PDF)}\pause
 \begin{minipage}{.45\linewidth}
-  The PDF is denoted $f_X(x)$ such that the probability of $X$ in the interval $(a,b]$ is: \pause
+  The PDF is denoted $f_X(\mathcal{x})$ such that the probability of $X$ in the interval $(a,b]$ is: \pause
   \begin{equation}
     \label{eq:10}
-    P(a< X \le b) = \int_a^b f_X(x)dx
+    P(a< X \le b) = \int_a^b f_X(\mathcal{x})d\mathcal{x}
   \end{equation}
 
   \pause
   
-  \begin{alertblock}{CDF of continuous random variable}
+  \begin{alertblock}{Cumulative distribution function (CDF) of continuous random variable}
     \pause
     \begin{eqnarray*}
       \label{eq:15}
-      F_X(x) &=& P(X \le x)\\
-             &=&\int_{-\infty}^x f_X(\tau)d\tau
+      F_X(\mathcal{x}) &=& P(X \le \mathcal{x})\\\pause
+             &=&\int_{-\infty}^\mathcal{x} f_X(\tau)d\tau
     \end{eqnarray*}
   \end{alertblock}
-
-    \pause
-
-    Thus:
-
-    \begin{equation}
-      \label{eq:15}
-      f_X(x) = \fr{dF_X(x)}{dx}
-    \end{equation}
   \end{minipage}\qquad\pause
   \begin{minipage}{.45\linewidth}
   \includegraphics[width=\textwidth, trim={0 2cm 0 0}, clip]{03_02b}
@@ -617,7 +610,7 @@ Lecture 3a: Introduction: Random variables}
 
   \begin{equation}
     \label{eq:11}
-    F_X \pause \equiv \pause P(X\le x) \pause \quad \text{for all } x
+    F_X \pause \equiv \pause P(X\le \mathcal{x}) \pause \quad \text{for all } \mathcal{x}
   \end{equation}
   \pause
 
@@ -626,13 +619,25 @@ Lecture 3a: Introduction: Random variables}
   \begin{enumerate}[<+->]
   \item      $F_X(-\infty) = 0$ and    $ F_X(\infty) = 1 $
 
-  \item $F_X(x) \ge 0 \quad \forall x$ and 
-  is nondecreasing with $x$.\footnote{Note that the symbol $\forall$ means ``for all''
-}
-
-  \item $F_X(x)$ is continuous to the right with $x$.
+  \item $F_X(\mathcal{x}) \ge 0 \quad \forall x$ and 
+  is nondecreasing with $\mathcal{x}$.
+  \item $F_X(\mathcal{x})$ is continuous to the right with $x$.
   \end{enumerate}
+    \pause
 
+    \begin{alertblock}{Relationship between CDF and PDF}\pause
+    The PDF is the derivative of the CDF: \pause
+
+    \begin{equation}
+      f_X(\mathcal{x}) = \fr{dF_X(\mathcal{x})}{d\mathcal{x}}
+    \end{equation}
+    \pause
+    while the CDF is the integral of the PDF:\pause
+    \begin{equation}
+      F_X(\mathcal{x}) = \int_{-\infty}^\mathcal{x} f_X(\tau)d\tau
+    \end{equation}
+      
+    \end{alertblock}
 \end{frame}
 
 \begin{frame}
@@ -685,14 +690,14 @@ Lecture 3a: Introduction: Random variables}
   \item Continuous case:
     \begin{equation}
       \label{eq:21}
-      P(a < X \le b) = \int_{-\infty}^b f_X(x)dx  - \int_{-\infty}^a f_X(x)dx
+      P(a < X \le b) = \int_{-\infty}^b f_X(x)dx  - \int_{-\infty}^a f_X(\mathcal{x})d\mathcal{x}
     \end{equation}
 
   \item Discrete case:
 
     \begin{equation}
       \label{eq:22}
-      P(a < X \le b) = \sum_{x_i \le b} p_X (x_i) - \sum_{x_i \le a} p_X (x_i)
+      P(a < X \le b) = \sum_{\mathcal{x}_i \le b} p_X (\mathcal{x}_i) - \sum_{\mathcal{x}_i \le a} p_X (\mathcal{x}_i)
     \end{equation}
 
   \item For all random variables:
@@ -715,7 +720,7 @@ Lecture 3a: Introduction: Random variables}
   \begin{block}{Mean}
      Weighted average or expected value \pause
     \begin{eqnarray}
-      \mathbb{E}(X) &=&\sum_i x_i p_X(x_i) \quad \text{\og discrete case} \pause
+      \mathbb{E}(X) &=&\sum_i \mathcal{x}_i p_X(\mathcal{x}_i) \quad \text{\og discrete case} \pause
     \end{eqnarray}
   \end{block}
    
@@ -723,7 +728,7 @@ Lecture 3a: Introduction: Random variables}
     In the discrete case: \pause
     \begin{equation}
       \label{eq:var}
-      \mathbb{V}(X) = \sum_i(x_i - \mu_X)^2p_X(x_i)
+      \mathbb{V}(X) = \sum_i(\mathcal{x}_i - \mu_X)^2p_X(\mathcal{x}_i)
     \end{equation}
     \pause
 
@@ -813,7 +818,7 @@ Lecture 3a: Introduction: Random variables}
   \begin{itemize}[<+->]
   \item Mean: weighted average or expected value \pause
     \begin{eqnarray}
-      \mathbb{E}(X) &=&\int_{-\infty}^{\infty}xf_X(x)dx \quad \text{\og continuous case}
+      \mathbb{E}(X) &=&\int_{-\infty}^{\infty}\mathcal{x}f_X(\mathcal{x})d\mathcal{x} \quad \text{\og continuous case}
     \end{eqnarray}
   \end{itemize}
 
@@ -821,7 +826,7 @@ Lecture 3a: Introduction: Random variables}
     In the continuous case:\pause
     \begin{equation}
       \label{eq:2}
-      \mathbb{V}(X) = \int_{-\infty}^{\infty}(x - \mu_X)^2 f_X(x)dx
+      \mathbb{V}(X) = \int_{-\infty}^{\infty}(x - \mu_X)^2 f_X(\mathcal{x})d\mathcal{x}
     \end{equation}
     \pause
 
@@ -840,13 +845,13 @@ Lecture 3a: Introduction: Random variables}
   \frametitle{Example 3: Loaded beam} \pause
     \includegraphics[width=.3\textwidth]{E_02_05a}
     Consider the beam under a 100-kg load. If the load is equally likely to be placed anywhere along the 10m span of the beam,\pause
-    then the PDF of the load position $X$ is \alert{uniformly distributed} in $0 < x\le 10$, i.e.:\pause
+    then the PDF of the load position $X$ is \alert{uniformly distributed} in $0 < \mathcal{x}\le 10$, i.e.:\pause
 
     \begin{equation}
       \label{eq:e2}
       f_X(c) =
       \begin{cases}
-        c & \quad 0 < x \le 10 \\ \pause
+        c & \quad 0 < \mathcal{x} \le 10 \\ \pause
         0 & \quad \text{otherwise}
       \end{cases}
     \end{equation}
@@ -875,7 +880,7 @@ Lecture 3a: Introduction: Random variables}
     \begin{enumerate}[(a)]\setcounter{enumi}{1}
     \item The CDF is given by: \pause
       \begin{eqnarray*}
-        F_X &=&\pause \int_0^x cdx \pause =  cx \pause = \fr{x}{10} \qquad \pause 0 < x \le 10
+        F_X &=&\pause \int_0^\mathcal{x} cd\mathcal{x} \pause =  c\mathcal{x} \pause = \fr{\mathcal{x}}{10} \qquad \pause 0 < \mathcal{x} \le 10
       \end{eqnarray*}
       \pause
       
@@ -896,45 +901,45 @@ Lecture 3a: Introduction: Random variables}
     \end{enumerate}
  \end{frame}
 
-\begin{frame}
-  \frametitle{Example 4: Useful life of machines}
-    The useful life $T$ of welding machines is a random variable with an \alert{exponential distribution}. The PDF and CDF are:
-    \begin{eqnarray*}
-      f_T(t) &=&\lambda e^{-\lambda t} \qquad t\ge 0\\ \pause
-      F_T(t) &=&1 - e^{-\lambda t} \qquad t\ge 0
-    \end{eqnarray*}
-    \pause
+% \begin{frame}
+%   \frametitle{Example 4: Useful life of machines}
+%     The useful life $T$ of welding machines is a random variable with an \alert{exponential distribution}. The PDF and CDF are:
+%     \begin{eqnarray*}
+%       f_T(t) &=&\lambda e^{-\lambda t} \qquad t\ge 0\\ \pause
+%       F_T(t) &=&1 - e^{-\lambda t} \qquad t\ge 0
+%     \end{eqnarray*}
+%     \pause
     
-    \begin{center}
-    \includegraphics[width=.4\textwidth]{E_03_03a}\quad \pause
-    \includegraphics[width=.4\textwidth]{E_03_03b}
-  \end{center}
-    \pause
-    \begin{enumerate}[(a)]
-    \item Find the mean of this distribution
-    \item Find the median
-    \item Show that the variance is $\fr{1}{\lambda^2}$
-    \end{enumerate}
- \end{frame}
+%     \begin{center}
+%     \includegraphics[width=.4\textwidth]{E_03_03a}\quad \pause
+%     \includegraphics[width=.4\textwidth]{E_03_03b}
+%   \end{center}
+%     \pause
+%     \begin{enumerate}[(a)]
+%     \item Find the mean of this distribution
+%     \item Find the median
+%     \item Show that the variance is $\fr{1}{\lambda^2}$
+%     \end{enumerate}
+%  \end{frame}
 
 
-\begin{frame}
-  \frametitle{Example 4: Useful life of machines}
-    \begin{eqnarray*}
-    \text{PDF}:\pause  f_T(t) &=& \lambda e^{-\lambda t} \qquad t\ge 0\\ \pause
-     \text{CDF}:\pause   F_T(t) &=& 1 - e^{-\lambda t} \qquad t\ge 0
-    \end{eqnarray*}
-    \pause
-    \begin{enumerate}[(a)]
-    \item The mean is given by $\mu_T = \mathbb{E}(T) = \int_0^\infty t\lambda e^{-\la t}dt$.\pause We use integration by parts: $\int u dv = uv - \int v du$.\pause
-      \begin{eqnarray*}
-        \mu_T &=& \int_0^\infty t\lambda e^{-\la t}dt \\ \pause
-              &=& \la \int_0^\infty {\bl \lambda} {\rd  e^{-\la t}dt } \\ \pause
-              &=& \la \lt[ \bl t \lt(-\fr{1}{\la} e^{-\la t}\rt) \rt]_0^\infty - {\rd \lt[ -\fr{1}{\la} e^{-\la t} dt \rt] } \\ \pause
-              &=& \la \lt( {\bl 0} + {\rd \fr{1}{\la}\fr{-e^{-\la t}}{\la} \Bigl|_0^\infty} \rt) \pause = \fr\la{\la^2} = \fr1\la
-      \end{eqnarray*}
-    \end{enumerate}
- \end{frame}
+% \begin{frame}
+%   \frametitle{Example 4: Useful life of machines}
+%     \begin{eqnarray*}
+%     \text{PDF}:\pause  f_T(t) &=& \lambda e^{-\lambda t} \qquad t\ge 0\\ \pause
+%      \text{CDF}:\pause   F_T(t) &=& 1 - e^{-\lambda t} \qquad t\ge 0
+%     \end{eqnarray*}
+%     \pause
+%     \begin{enumerate}[(a)]
+%     \item The mean is given by $\mu_T = \mathbb{E}(T) = \int_0^\infty t\lambda e^{-\la t}dt$.\pause We use integration by parts: $\int u dv = uv - \int v du$.\pause
+%       \begin{eqnarray*}
+%         \mu_T &=& \int_0^\infty t\lambda e^{-\la t}dt \\ \pause
+%               &=& \la \int_0^\infty {\bl t\lambda} {\rd  e^{-\la t}dt } \\ \pause
+%               &=& \la \lt[ \bl t \lt(-\fr{1}{\la} e^{-\la t}\rt) \rt]_0^\infty - {\rd \lt[ -\fr{1}{\la} e^{-\la t} dt \rt] } \\ \pause
+%               &=& \la \lt( {\bl 0} + {\rd \fr{1}{\la}\fr{-e^{-\la t}}{\la} \Bigl|_0^\infty} \rt) \pause = \fr\la{\la^2} = \fr1\la
+%       \end{eqnarray*}
+%     \end{enumerate}
+%  \end{frame}
 
  
 \section{Outlook}
