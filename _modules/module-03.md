@@ -5,7 +5,7 @@ title: Module 3 Probability Distributions
 Tue, Sep 29
 : **LECTURE 3A**{: .label .label-blue }[Introduction: Random Variables](/assets/lectures/M3-Probability-Distributions/M3a-Random-Variables-Handout.pdf)
 : **PROBLEM SET 4**{: .label .label-red}[PDF](/assets/problem-sets/PS4.pdf), [LaTeX](/assets/problem-sets/PS4.tex)  **(Due Wed 10/7)** 
-: **LAB 4**{: .label .label-orange}[*FORTHCOMING*](#) **(Due Wed 10/7)**
+: **LAB 4**{: .label .label-orange}[Construction Duration Analysis](https://colab.research.google.com/drive/1SdkX82Vf6Phf0TXqBa2rhk2zF-oFVdbi?usp=sharing) **(Due Wed 10/7)**
 
 Thu, Oct 1
 : **LECTURE 3B**{: .label .label-blue }[Normal Distribution](/assets/lectures/M3-Probability-Distributions/M3b-Normal-Distribution-Handout.pdf)
