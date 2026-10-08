@@ -21,7 +21,7 @@ Tue, Oct 6
 
 Thu, Oct 8
 : **LECTURE 3D**{: .label .label-blue }[Binomial Distribution](/assets/lectures/M3-Probability-Distributions/M3d-Binomial-Distribution-Handout.pdf)
-: **ACTIVITY 3D**{: .label .label-activity}[Prob. of 1 MIE student](https://docs.google.com/forms/d/e/1FAIpQLSed-fvO6JDD4wTrJZgJR_fZxKWXiOn7uBzykFTqSLIsBnMCOg/viewform?usp=dialog)
+: **ACTIVITY 3D**{: .label .label-activity}[Prob. of 1 MIE student](https://docs.google.com/forms/d/e/1FAIpQLSe9Q7UuPho34Ssmxk6HZx8JIZOnqHqXGMKqCccVl2YLUJSmpA/viewform?usp=dialog)
 
 Tue, Oct 13
 : **LECTURE 3E**{: .label .label-blue }[Poisson Distribution](/assets/lectures/M3-Probability-Distributions/M3e-Poisson-Distribution-Handout.pdf)
