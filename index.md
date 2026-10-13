@@ -16,7 +16,7 @@ description: Listing of course modules and topics.
 <!-- Disabled for FA26; problem sets link their .tex directly from the module entries.
 [Overleaf/LaTeX](#TODO-overleaf){:target="_blank" .btn .btn-overleaf .mr-1 }
 -->
-[Datahub](#TODO-datahub){:target="_blank" .btn .btn-datahub .mr-1 }
+[Datahub](https://drive.google.com/drive/folders/1ED6aGnxANH-JkQbwCzkgXvzEsppZG2qY?usp=sharing){:target="_blank" .btn .btn-datahub .mr-1 }
 [PS Solutions](https://drive.google.com/drive/folders/1hc-Ti_R4qZT9J7RGOTWINawrcUh-yrge?usp=sharing){:target="_blank" .btn .btn-pssolution .mr-1 }
 [LAB Solutions](https://drive.google.com/drive/folders/1xvsHsEU1Vt8XAoVUtRm1vBJ-11--CbWk?usp=sharing){:target="_blank" .btn .btn-labsolution .mr-1 }
 
