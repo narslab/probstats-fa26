@@ -129,6 +129,10 @@ $main-max-width: 1200px;
 } 
 
 
+.btn-pssolution {
+  @include btn-color($white, #00796B);
+}
+
 .btn-labsolution {
   @include btn-color($white, #ae440f);
 } 
