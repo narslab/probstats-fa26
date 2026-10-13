@@ -1,7 +1,7 @@
 %\PassOptionsToPackage{table}{xcolor}
 % \documentclass[smaller, dvipsnames,handout,
 % hyperref={colorlinks=true,urlcolor=magenta,citecolor=cyan,linkcolor=orange}]{beamer}
-\def\bmode{2} % Mode 0 for presentation, mode 1 for a handout with notes, mode 2 fo% r handout without notes
+\def\bmode{0} % Mode 0 for presentation, mode 1 for a handout with notes, mode 2 fo% r handout without notes
 \if 0\bmode
 \documentclass[usenames,dvipsnames,smaller]{beamer}
 \else \if 1\bmode
@@ -491,6 +491,8 @@ Lecture 3E: The Poisson Distribution}
   The above are all \textbf{\bl Poisson processes} and the respective probabilities can be modeled by the \textbf{\pl Poisson distribution}
 \end{frame}
 
+
+
 \begin{frame}
   \frametitle{Poisson process}
   \pause
@@ -522,6 +524,21 @@ Lecture 3E: The Poisson Distribution}
 \end{frame}
 
 
+\begin{frame}
+  \frametitle{Poisson distribution: brief history}
+
+  \begin{minipage}{0.6\textwidth}
+      \begin{itemize}
+    \item Attributed to Simeon Denis Poisson (1781–1840), who published it in 1837 in a theory regarding number of wrongful convictions
+    \item Earlier similar work had been published by Abraham de Moivre (in 1711)
+    \item In 1860: Simon Newcomb fitted the Poisson distribution to astronomical data
+    \item In 1898: Ladislaus Bortkiewicz applied the Poisson distribution to deaths by horse kicks in the Prussian army
+  \end{itemize}
+  \end{minipage}\pause
+\begin{minipage}{0.4\textwidth}
+  \includegraphics[width=\textwidth]{SimeonDenisPoisson.jpg}
+\end{minipage}
+\end{frame}
 
 
 \section{The Poisson distribution}
