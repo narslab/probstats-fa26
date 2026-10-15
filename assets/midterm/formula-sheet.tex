@@ -50,6 +50,7 @@
     urlcolor=slblue
 }
 
+
 %%%TIKZ
 \usepackage{tikz}
 
@@ -252,15 +253,16 @@ Combinations of $n$ objects taken $k$ at a time:
 \section{Probability distributions}
 ~
 \begin{table}[ht!]\small
+  \resizebox{\textwidth}{!}{%
   \begin{tabular}{l l l l l} \toprule
     \bf Distribution & \bf Mean &\bf Variance & \bf Median & $P(X \leq x)$\\ \toprule
-    Uniform($a,b$) & $\fr{a+b}2$ & $\fr{(b-a)^2}{12}$ & $\fr{a+b}2$ & $\texttt{uniform.cdf(x, a, b)}$ \\[2mm]
+    Uniform($a,b$) & $\fr{a+b}2$ & $\fr{(b-a)^2}{12}$ & $\fr{a+b}2$ & $\texttt{uniform.cdf(x, a, b-a)}$ \\[2mm]
     $\mathcal{N}(\mu,\sigma)$ & $\mu$ & $\sigma^2$ & $\mu$ & \texttt{norm.cdf(x, mu, sigma)} \\[2mm]
-    $\text{Lognormal}(\mu,\sigma)$ & $\lt[\exp\lt(\mu + \fr12 \sigma^2\rt)\rt]\exp(2\mu + \sigma^2)$ & $\exp\lt(\sigma^2\rt) - 1$ & $\exp\lt(\mu\rt)$ & \texttt{lognorm.cdf(x, sigma, np.exp(mu))} \\[2mm]
+    $\text{Lognormal}(\mu,\sigma)$ & $\exp\lt(\mu + \fr12 \sigma^2\rt)$ & $\lt[\exp\lt(\sigma^2\rt) - 1\rt]\exp(2\mu + \sigma^2)$ & $\exp\lt(\mu\rt)$ & \texttt{lognorm.cdf(x, sigma, scale=np.exp(mu))} \\[2mm]
     $\text{Binomial}(n,p)$ & $np$ & $np(1-p)$ & $\lfloor (n+1)p \rfloor$ & \texttt{binom.cdf(x, n, p)} \\[2mm]
     $\text{Poisson}(\lambda)$ & $\lambda$ & $\lambda$ & $\lfloor \lambda \rfloor$ & \texttt{poisson.cdf(x, lambda)} \\[2mm]
-    $\text{Exponential}(\lambda)$ & $\fr1{\lambda}$ & $\fr1{\lambda^2}$ & $\fr{\ln 2}{\lambda}$ & \texttt{expon.cdf(x, 1/lambda)} \\\bottomrule
-  \end{tabular}
+    $\text{Exponential}(\lambda)$ & $\fr1{\lambda}$ & $\fr1{\lambda^2}$ & $\fr{\ln 2}{\lambda}$ & \texttt{expon.cdf(x, scale=1/lambda)} \\\bottomrule
+  \end{tabular}}
   \caption{Common probability distributions.}
   \label{tab:distributions}
 \end{table}

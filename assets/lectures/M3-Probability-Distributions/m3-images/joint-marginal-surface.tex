@@ -1,0 +1,64 @@
+% Joint and marginal distributions surface plot used in M3f-Joint-Distributions.tex.
+% Precomputed here because the pgfplots surface is slow to render on every lecture build.
+% Each overlay below becomes one page of joint-marginal-surface.pdf (pages 1--5 correspond
+% to slides 4--8 of the "Joint and marginal distributions" frame).
+% Rebuild with:
+%   ./build-plots.sh joint-marginal-surface
+% (beamer is used so fonts match the slides; the script crops every page to a common box.)
+\documentclass[smaller]{beamer}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\begin{document}
+\begin{frame}[plain]
+  \centering
+  \pgfplotsset{
+    colormap={whitered}{color(0cm)=(white); color(1cm)=(purple!75!blue)}
+  }
+
+  \begin{tikzpicture}[scale=.6,
+    declare function={mu1=1;},
+    declare function={mu2=2;},
+    declare function={sigma1=0.5;},
+    declare function={sigma2=1;},
+    declare function={normal(\m,\s)=1/(2*\s*sqrt(pi))*exp(-(x-\m)^2/(2*\s^2));},
+    declare function={bivar(\ma,\sa,\mb,\sb)=
+      1/(2*pi*\sa*\sb) * exp(-((x-\ma)^2/\sa^2 + (y-\mb)^2/\sb^2))/2;}]
+    \begin{axis}[
+      colormap name=whitered,
+      width=15cm,
+      view={45}{65},
+      enlargelimits=false,
+      grid=major,
+      domain=-1:4,
+      y domain=-1:4,
+      samples=26,
+      xlabel=$x$,
+      ylabel=$y$,
+      zlabel={$P$},
+      colorbar,
+      colorbar style={
+        at={(1.1,0)},
+        anchor=south west,
+        height=0.25*\pgfkeysvalueof{/pgfplots/parent axis height},
+        title={$P(x,y)$}
+      }
+      ]
+      \addplot3 [domain=-1:4,samples=31, samples y=0, red, thick, smooth] (x,4,{normal(mu1,sigma1)});
+      \addplot3 [domain=-1:4,samples=31, samples y=0, blue, thick, smooth] (-1,x,{normal(mu2,sigma2)});
+      \addplot3 [surf] {bivar(mu1,sigma1,mu2,sigma2)};
+
+      \only<2->{\draw [black!50] (axis cs:-1,0,0) -- (axis cs:4,0,0);}
+      \only<3->{\draw [black!50] (axis cs:0,-1,0) -- (axis cs:0,4,0);}
+
+      \only<5->{\node[blue] at (axis cs:-1,1,0.18) [pin=165:$f(x_2)$] {};}
+      \only<4->{\node[red] at (axis cs:1.5,4,0.32) [pin=-15:$f(x_1)$] {};}
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+\end{document}

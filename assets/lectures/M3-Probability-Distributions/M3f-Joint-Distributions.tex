@@ -1,21 +1,21 @@
-\def\bmode{0} % Mode 0 for presentation, mode 1 (or not 0) for a handout with notes, mode 2 for handout without notes
-\if 0\bmode
-\documentclass[smaller]{beamer}
-\else \if 1\bmode
-\documentclass[smaller,handout]{beamer}
- \immediate\write18{pdflatex -jobname=\jobname-Notes-Handout\space\jobname}
-\usepackage{handoutWithNotes}
-\pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
-\else \if 2\bmode
-\immediate\write18{pdflatex -jobname=\jobname-Handout\space\jobname}
-\documentclass[smaller,handout]{beamer}
-\fi
-\fi
-\fi
+% \def\bmode{2} % Mode 0 for presentation, mode 1 (or not 0) for a handout with notes, mode 2 for handout without notes
+% \if 0\bmode
+% \documentclass[smaller]{beamer}
+% \else \if 1\bmode
+% \documentclass[smaller,handout]{beamer}
+%  \immediate\write18{pdflatex -jobname=\jobname-Notes-Handout\space\jobname}
+% \usepackage{handoutWithNotes}
+% \pgfpagesuselayout{2 on 1 with notes}[letterpaper, landscape, border shrink=4mm]
+% \else \if 2\bmode
+% \immediate\write18{pdflatex -jobname=\jobname-Handout\space\jobname}
+% \documentclass[smaller,handout]{beamer}
+% \fi
+% \fi
+% \fi
 
 
-% \documentclass[smaller,handout
-% ]{beamer}
+\documentclass[smaller,handout
+]{beamer}
 %\usepackage{etex}
 %\newcommand{\num}{6{} }
 
@@ -32,10 +32,10 @@
 \useinnertheme{circles}
 \usecolortheme{seahorse}
 
-\usepackage[backend=biber,style=authoryear,maxcitenames=2,maxbibnames=99,safeinputenc,url=false,
-eprint=false]{biblatex}
-\addbibresource{bib/references.bib}
-\AtEveryCitekey{\iffootnote{{\tiny}\tiny}{\tiny}}
+% \usepackage[backend=biber,style=authoryear,maxcitenames=2,maxbibnames=99,safeinputenc,url=false,
+% eprint=false]{biblatex}
+% \addbibresource{bib/references.bib}
+% \AtEveryCitekey{\iffootnote{{\tiny}\tiny}{\tiny}}
 
 %\usepackage{pgfpages}
 %\setbeameroption{hide notes} % Only slides
@@ -367,8 +367,153 @@ Lecture 3f: Joint Distributions }
   \frametitle{Outline}
   \tableofcontents
 \end{frame}
+
+\section{Review}
+\begin{frame}
+  \frametitle{Midterm Exam}
+  \pause
+
+  \begin{itemize}
+  \item Open-resource examination
+    \pause
+
+    \medskip
+    
+  \item Available for download via Moodle on Tuesday, October 20th at \textbf{12:50 PM}\pause
+    \medskip
+
+  \item Due {\bf same day} at \textbf{2:30 PM} on Gradescope \pause
+    \medskip
+
+    
+  \item Exam is designed to be completed in under {\bf 75 minutes}. \pause 
+  The 100-minute window gives you flexibility and time to plan, organize and check your work before submission.
+    \pause
+    \medskip
+    
+%  \item \bl Next lecture (Tuesday, October 6th) will be a \textbf{Midterm Review Session}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Set theory}
+
+  \begin{columns}[T]
+    \begin{column}{.48\textwidth}
+      Properties:
+      \begin{align*}
+        A \cup B &= B \cup A \\
+        A \cap B &= B \cap A\\
+        (A \cup B) \cup C &= A \cup ( B \cup C) \\
+        (AB)C &= A(BC)\\
+        (A \cup B) \cap C &= (A \cap C) \cup (B \cap C)  \\
+        (AB) \cup C &= (A\cup C) \cap (B \cup C)
+      \end{align*}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      De Morgan's rule:
+      \begin{align*}
+        \overline{E_1 \cup E_2 \cup \cdots \cup E_n} &= \overline{E_1} \cap \overline{E_2} \cap \cdots \cap \overline{E_n}\\
+        \overline{E_1 \cap E_2 \cap \cdots \cap E_n} &= \overline{E_1} \cup \overline{E_2} \cup \cdots \cup \overline{E_n}
+      \end{align*}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Probability theory}
+  \small
+  \begin{columns}[T]
+    \begin{column}{.48\textwidth}
+      {\bf General rules:}
+      \begin{align*}
+        P(\ol{E}) &= 1- P(E) \\
+        P(A\cup B) &= P(A) + P(B) - P(AB) \\
+        P(A\cap B) &= P(AB) = P(A|B)P(B) \\
+        P(A|B) &= \fr{P(AB)}{P(B)}\\
+        P(A|B) &= 1 - P(\ol{A}|B)
+      \end{align*}
+    \end{column}
+    \begin{column}{.48\textwidth}
+      {\bf Mutually exclusive events:}
+      \begin{equation*}
+        P(A\cup B) = P(A) + P(B)
+      \end{equation*}
+      {\bf Statistically independent events:} 
+      \begin{align*}
+        P(AB) &= P(A)P(B) \\
+        P(A|B) &= P(A) \\
+        P(B|A) &= P(B)
+      \end{align*}
+    \end{column}
+  \end{columns}
+
+  {\bf Total probability theorem:}
+  \begin{equation*}
+    P(A) = P(A|E_1)P(E_1) + P(A|E_2)P(E_2) + \cdots + P(A|E_n)P(E_n) = \sum_{i=1}^n P(A|E_i)P(E_i)
+  \end{equation*}
+  {\bf Bayes' theorem (general):}
+  \begin{equation*}
+    P(E_i|A) = \fr{P(A|E_i)P(E_i)}{\sum_{j=1}^nP(A|E_j)P(E_j)}
+  \end{equation*}
+  \pause
+  {\bf Bayes' theorem (special case for two events): }
+  \begin{equation*}
+    P(B|A) = \fr{P(A|B)P(B)}{P(A|B)P(B) + P(A|C)P(C)}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Counting}
+
+  Number of ways to arrange $n$ objects:
+  \begin{equation*}
+    n! = n(n-1)(n-2)\cdots 3\times 2\times 1
+  \end{equation*}
+  \pause
+    Permutations (arrangements) of $n$ objects: $n!$\pause
+
+  Permutations (arrangements) of $n$ objects taken $k$ at a time:
+  \begin{equation*}
+    _nP_k = \fr{n!}{(n-k)!}
+  \end{equation*}\pause
+
+  Permutations of $n$ objects with $n_1$ of one type, $n_2$ of another type, \dots, $n_k$ of the $k$-th type:
+  \begin{equation*}
+    \frac{n!}{n_1! n_2! \cdots n_k!}
+  \end{equation*}\pause
+
+  Combinations of $n$ objects taken $k$ at a time:
+  \begin{equation*}
+    _nC_k = {n \choose k} = \fr{n!}{k!(n-k)!}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Probability distributions}
+
+  \begin{center}
+    \resizebox{\textwidth}{!}{%
+      \begin{tabular}{l l l l l} \toprule
+        \bf Distribution & \bf Mean &\bf Variance & \bf Median & CDF using \texttt{scipy.stats} $P(X \leq x)$\\ \midrule
+        Uniform($a,b$) & $\fr{a+b}2$ & $\fr{(b-a)^2}{12}$ & $\fr{a+b}2$ & \texttt{uniform.cdf(x, a, b-a)} \\[2mm]\pause
+        $\mathcal{N}(\mu,\sigma)$ & $\mu$ & $\sigma^2$ & $\mu$ & \texttt{norm.cdf(x, mu, sigma)} \\[2mm]\pause
+        $\mathcal{LN}(\mu,\sigma)$ & $\exp\lt(\mu + \fr12 \sigma^2\rt)$ & $\lt[\exp\lt(\sigma^2\rt) - 1\rt]\exp(2\mu + \sigma^2)$ & $\exp\lt(\mu\rt)$ & \texttt{lognorm.cdf(x, sigma, scale=np.exp(mu))} \\[2mm]\pause
+        $\text{Exponential}(\lambda)$ & $\fr1{\lambda}$ & $\fr1{\lambda^2}$ & $\fr{\ln 2}{\lambda}$ & \texttt{expon.cdf(x, scale=1/lambda)} \\[2mm]\pause        
+        $\text{Binomial}(n,p)$ & $np$ & $np(1-p)$ & $\lfloor (n+1)p \rfloor$ & \texttt{binom.cdf(x, n, p)} \\[2mm]
+        $\text{Poisson}(\lambda)$ & $\lambda$ & $\lambda$ & $\lfloor \lambda \rfloor$ & \texttt{poisson.cdf(x, lambda)} \\
+\bottomrule
+      \end{tabular}}
+  \end{center}
+\pause
+  \medskip
+  Note: the $\lfloor \cdot \rfloor$ symbol means to round down to the nearest integer.
+\end{frame}
+
  
-\section{Preamble}
+\section{Intro: Joint Distributions}
  
 
 \begin{frame}
@@ -384,8 +529,6 @@ Lecture 3f: Joint Distributions }
    \end{itemize}
 \end{frame}
 
-
-\section{Joint distributions}
 
 \begin{frame}
   \frametitle{Joint distributions}\pause
@@ -413,56 +556,6 @@ Lecture 3f: Joint Distributions }
   \end{block}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Joint and marginal distributions} \pause
-
-  Marginal distributions: $f(x_1)$ and  $f(x_2)$ \\ \pause
-  Joint distribution: $f(x_1,x_2)$. \pause
-  
-  \pgfplotsset{
-    colormap={whitered}{color(0cm)=(white); color(1cm)=(purple!75!blue)}
-  }
-
-  \begin{tikzpicture}[scale=.6,
-    declare function={mu1=1;},
-    declare function={mu2=2;},
-    declare function={sigma1=0.5;},
-    declare function={sigma2=1;},
-    declare function={normal(\m,\s)=1/(2*\s*sqrt(pi))*exp(-(x-\m)^2/(2*\s^2));},
-    declare function={bivar(\ma,\sa,\mb,\sb)=
-      1/(2*pi*\sa*\sb) * exp(-((x-\ma)^2/\sa^2 + (y-\mb)^2/\sb^2))/2;}]
-    \begin{axis}[
-      colormap name=whitered,
-      width=15cm,
-      view={45}{65},
-      enlargelimits=false,
-      grid=major,
-      domain=-1:4,
-      y domain=-1:4,
-      samples=26,
-      xlabel=$x_1$,
-      ylabel=$x_2$,
-      zlabel={$P$},
-      colorbar,
-      colorbar style={
-        at={(1.1,0)},
-        anchor=south west,
-        height=0.25*\pgfkeysvalueof{/pgfplots/parent axis height},
-        title={$P(x_1,x_2)$}
-      }
-      ]
-      \only<4->{\addplot3 [domain=-1:4,samples=31, samples y=0, red, thick, smooth] (x,4,{normal(mu1,sigma1)});
-      \addplot3 [domain=-1:4,samples=31, samples y=0, blue, thick, smooth] (-1,x,{normal(mu2,sigma2)});
-      \addplot3 [surf] {bivar(mu1,sigma1,mu2,sigma2)};}
-
-      \only<5->{\draw [black!50] (axis cs:-1,0,0) -- (axis cs:4,0,0);}
-      \only<6->{\draw [black!50] (axis cs:0,-1,0) -- (axis cs:0,4,0);}
-
-      \only<8->{\node[blue] at (axis cs:-1,1,0.18) [pin=165:$f(x_2)$] {};}
-      \only<7->{\node[red] at (axis cs:1.5,4,0.32) [pin=-15:$f(x_1)$] {};}
-    \end{axis}
-  \end{tikzpicture}
-\end{frame}
 
 
 % \begin{frame}
@@ -674,8 +767,8 @@ Lecture 3f: Joint Distributions }
   \frametitle{Conditional distributions of continuous random variables}
   Recall the definition of conditional probability (multiplication rule):\pause
   \begin{eqnarray}
-    P(A|B) &=& \fr{P(AB)}{P(B)} \\\pause
-    P(AB) &=& \pause P(A|B)P(B)  = \pause P(B|A)P(A)
+    P(A|B) &=& \fr{P(AB)}{P(B)}
+    %P(AB) &=& \pause P(A|B)P(B)  = \pause P(B|A)P(A)
   \end{eqnarray}
   \pause
   Similarly, for two continuous r.v.'s, the conditional PDF of $X$ given $Y$ is:
@@ -700,6 +793,21 @@ Lecture 3f: Joint Distributions }
 \end{frame}
 
 \begin{frame}
+  \frametitle{Joint and marginal distributions} \pause
+
+  Marginal distributions: $f(x)$ and  $f(y)$ \\ \pause
+  Joint distribution: $f(x,y)$. \pause
+  
+  % Plot is precomputed in m3-images/joint-marginal-surface.tex (one page per overlay);
+  % rebuild it with m3-images/build-plots.sh after editing.
+  \includegraphics<-4| handout:0>[page=1]{joint-marginal-surface}%
+  \includegraphics<5| handout:0>[page=2]{joint-marginal-surface}%
+  \includegraphics<6| handout:0>[page=3]{joint-marginal-surface}%
+  \includegraphics<7| handout:0>[page=4]{joint-marginal-surface}%
+  \includegraphics<8-| handout:1>[page=5]{joint-marginal-surface}
+\end{frame}
+
+\begin{frame}
   \frametitle{Marginal distributions of continuous random variables} \pause
   Recall the theorem of total probability:\pause
   \begin{equation}
@@ -721,10 +829,25 @@ Lecture 3f: Joint Distributions }
       f(x,y) = \fr65\lt(x  + y^2\rt), \quad 0 < x < 1; 0 < y< 1
     \end{equation*}
     \begin{enumerate}[(a)]
-    \item Determine the marginal density function of the daily water level for reservoir A.
+    \item Determine the marginal density function of the daily water level for reservoir A, i.e.
+    $f_X(x)$
     \item If reservoir A is half full on a given day, what is the probability that the water level will be more than half full?
     \end{enumerate}
  \end{frame}
+
+\begin{frame}
+  \frametitle{Example 2: Water levels (cont.)}
+  \begin{equation*}
+    f(x,y) = \fr65\lt(x  + y^2\rt), \quad 0 < x < 1; 0 < y< 1
+  \end{equation*}
+
+  % Plot is precomputed in m3-images/water-levels-joint-pdf.tex;
+  % rebuild it with m3-images/build-plots.sh after editing.
+  \begin{center}
+    \includegraphics<1| handout:0>[page=1]{water-levels-joint-pdf}%
+    \includegraphics<2-| handout:1>[page=2]{water-levels-joint-pdf}
+  \end{center}
+\end{frame}
 
 \begin{frame}
   \frametitle{Example 2: Water levels (cont.)}\pause
@@ -761,7 +884,7 @@ Lecture 3f: Joint Distributions }
     \item {\gr If reservoir A is half full on a given day, what is the probability that the water level will be more than half full?} \pause
       We first find the conditional distribution:\pause
       \begin{eqnarray*}
-        f_{Y|X}(y|x) &=& \fr{f_{X,Y}(x,y)}{f_X(x)} = \pause \fr{\fr65\lt(x+y^2\rt)}{\fr25\lt(3x + 1\rt)^2} \pause = 3\fr{x+y^2}{3x +1}\\\pause
+        f_{Y|X}(y|x) &=& \fr{f_{X,Y}(x,y)}{f_X(x)} = \pause \fr{\fr65\lt(x+y^2\rt)}{\fr25\lt(3x + 1\rt)} \pause = 3\fr{x+y^2}{3x +1}\\\pause
         \text{Thus: } P(Y > 0.5 | X = 0.5) &=& \pause \int_{0.5}^1f_{Y|X}(y|x=0.5)dy \\\pause
                      &=&3\int_{0.5}^1\fr{0.5+y^2}{1.5 + 1} dy \\\pause
                      &=& \lt(\fr3{2.5}\rt)\pause \lt[0.5y + \fr{y^3}{3}\rt]_{0.5}^1 \pause
@@ -772,163 +895,10 @@ Lecture 3f: Joint Distributions }
 
  \end{frame}
 
- \begin{frame}
-   \frametitle{Reading}
-   \pause
-
-   \begin{itemize}[<+->]
-   \item Exponential distribution: Section 4.7 (Navidi)
-
-   \item {\rd Also read up on the Uniform Distribution in Section 4.8 (Navidi)}
-     
-   \item Joint distributions: Section 2.6 (Navidi)
-   \end{itemize}
- \end{frame}
-
-% \begin{frame}
-%   \frametitle{MATLAB Homework}
-%   \pause
-
-%   \begin{itemize}
-%   \item Ensure your submission is strictly a script saved with the \texttt{\rd .m} extension
-%     \pause
-%     \medskip
-    
-%   % \item Subsequent templates will include \texttt{clc} and \texttt{clear all} at the beginning of the script to facilitate grading by the TA
-%   %   \pause
-%   %   \medskip
-    
-%   \item MATLAB can only execute a script if it is in the \textit{\rd current folder}. \pause Otherwise you may get a message like the one below:
-%     \pause 
-%     \begin{center}
-%       \includegraphics[width=.4\textwidth]{matlab}
-%     \end{center}
-%     \pause
-%     If so, simply click on \texttt{Change Folder} or move the file to the current folder you are in. Finally, always make sure the path of a file being read by a script is valid from its location, otherwise you will have to deal with ``File not found'' errors.
-
-%     \pause
-%     \medskip
-
-%   \item MATLAB Homework 2 is due October 20, midnight.
-%   \end{itemize}
-% \end{frame}
 
 
-% \begin{frame}
-%   \frametitle{Midterm Exam}
-%   \pause
-
-%   \begin{itemize}
-%   \item 24-hour open-resource examination
-%     \pause
-
-%     \medskip
-    
-%   \item Available for download via Moodle on Tuesday, October 19th at \textbf{10:00 AM}\pause
-%     \medskip
-
-%   \item Due by October 23rd at \textbf{11:59 PM}\pause
-%     \medskip
-
-%   \item Exam length will be similar to last year's midterm or the practice exam(s) available on Moodle.
-%     \pause
-%     \medskip
-    
-%   \item Exam is designed to be completed in 2-3 hours or less. \pause The 24-hr window gives you flexibility and time to
-%     plan, organize and check your work before submission.
-%     \pause
-%     \medskip
-
-%   \item You will be allowed to use your calculator or Matlab to compute probabilities (as long as you indicate how you obtained your answer).
-%     \pause
-%     \medskip
-    
-% %  \item \bl Next lecture (Tuesday, October 6th) will be a \textbf{Midterm Review Session}
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}
-%   \frametitle{Continuous marginal and conditional distributions in practice}
-%   \begin{exampleblock}{Example 1: Water levels}
-%     \begin{enumerate}[(a)]
-%     \end{enumerate}
-%   \end{exampleblock}
-% \end{frame}
-
-% \begin{frame}
-%   \frametitle{Functions of multiple random variables: key implications}\pause
-  
-%   \begin{block}{(1) The sum of independent Poisson processes is  a Poisson process}\pause
-%     If $Z = \sum_{i=1}^n X_i$, where $X_i\sim \text{Poisson}(v_i)$, then:
-%     \begin{equation}
-%       \label{eq:21}
-%     v_Z= \sum_{i=1}^n v_i
-%   \end{equation}
-%   \end{block}
-
-%   \pause
-  
-%   \begin{block}{(2) The sum/difference of independent normal variates is normal} \pause
-%     If $Z  = \sum_{i=1}^n a_i X_i$, then $\mu_Z = \sum_{i=1}^na_i\mu_{X_i}$ and $\sigma_Z^2 = \sum_{i=1}^n a_i^2\sigma_{X_i}^2$ \pause
-%   \end{block}
-
-  
-% \end{frame}
-
-% \begin{frame}
-%   \frametitle{Functions of multiple random variables: key implications}\pause
-% \begin{block}{(3) The quotient/product of independent lognormal variates is lognormal}\pause
-%     If $Z = \prod_{i=1}^nX_i$, where $X_i \sim \text{Lognormal}(\la_{X_i},\zeta_{X_i})$, then\pause
-%     \begin{equation}
-%       \label{eq:22}
-%       \la_Z = \sum_{i=1}^n\la_{X_i} \quad \zeta_Z^2 = \sum_{i=1}^n\zeta_{X_i}^2
-%     \end{equation}
-%   \end{block}
-
-% \end{frame}
 
 
-% \section{Outlook}
-% \begin{frame}
-%   \frametitle{Recap}
-%   \begin{itemize}
-%   \item \textbf{Lognormal distribution:} $X\sim LN(\mu,\sigma^{2})$\\
-%     CDF: $F_{X}(x) = P(X\le x) = \Phi((\ln(x) - \mu)/\sigma)$\\\pause
-%     \pause
-%     Mean:
-%     \begin{equation}
-%       \label{eq:15}
-%       E(X) = e^{\lt(\mu + \fr12 \sigma^2\rt)}
-%     \end{equation}
-%     \pause    
-%     Variance:
-%       \begin{equation}
-%     \label{eq:16}
-%     Var(X) = \pause   (e^{\sigma^2} - 1)e^{(2\mu + \sigma^{2})}
-%   \end{equation}
-    
-%   \item \textbf{Exponential distribution}: $X \sim Exp(\la)$
-%     \pause
-%     \begin{eqnarray}
-%       \text{PDF:}\quad  f_{X}(x) &=& \pause \la e^{-\la x}, \pause \qquad x > 0 \\
-%       \text{CDF:}\quad  F_{X}(x) &=& P(X \le x) = \pause  1 - e^{-\la x}, \pause \qquad x > 0 
-%     \end{eqnarray}
-
-%     \pause
-
-%     Mean:
-%     \begin{equation}
-%       E(X) = \fr{1}{\la}
-%     \end{equation}
-
-%     \pause
-
-%     Variance:
-%     \begin{equation}
-%       Var(X) = \fr{1}{\la^{2}}
-%     \end{equation}
-%   \end{itemize}
-% \end{frame}
 
 
 %\begin{frame}[allowframebreaks]
