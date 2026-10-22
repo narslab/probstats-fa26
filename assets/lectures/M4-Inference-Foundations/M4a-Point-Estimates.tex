@@ -408,7 +408,7 @@ Lecture M4a: Point Estimates, Sampling Variability and Central Limit Theorem}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Statistical inference}
+  \frametitle{Module 4 overview}
   \pause
 
   This module (M4) covers concepts in statistical inference: \pause
@@ -423,7 +423,7 @@ Lecture M4a: Point Estimates, Sampling Variability and Central Limit Theorem}
 \begin{frame}
   \frametitle{Point estimates}
   \begin{definition}
-    A \textbf{point estimate} of a parameter $\theta$ (e.g.\ proportion $p$, or mean value $\mu$) is a single number that can be regarded as a sensible value for
+    A \textbf{point estimate}, $\hat\theta$, of a parameter $\theta$ (e.g.\ proportion $p$, or mean value $\mu$) is a single number that can be regarded as a sensible value for
     $\theta$ and is obtained by computing the value of a suitable statistic (e.g.\ sample mean, sample standard deviation, etc) from given sample data. \pause The selected
     statistic $\hat{\Theta}$ is the \textbf{point estimator} of $\theta$.
   \end{definition}
@@ -826,27 +826,27 @@ Lecture M4a: Point Estimates, Sampling Variability and Central Limit Theorem}
 
 
  \section{Variability and CLT}
-\begin{frame}
-  \frametitle{Variability of a point estimate}
-  \pause
+% \begin{frame}
+%   \frametitle{Variability of a point estimate}
+%   \pause
   
-  \begin{exampleblock}{Example 2: Solar energy expansion}
-    Suppose the proportion of American adults who support the expansion of solar energy is $p = 0.88$, which is our
-    parameter of interest. Develop a simulation to investigate how the sample proportion $\hat{p}$ behaves compared to the true population proportion $p$:
+%   \begin{exampleblock}{Example 2: Solar energy expansion}
+%     Suppose the proportion of American adults who support the expansion of solar energy is $p = 0.88$, which is our
+%     parameter of interest. Develop a simulation to investigate how the sample proportion $\hat{p}$ behaves compared to the true population proportion $p$:
 
-    \pause
+%     \pause
     
-    \begin{enumerate}[\bf (a)]
-    \item  Create a set of a large number of entries (e.g.\ 30,000) where 88\% are in support and 12\% are not.\pause
-    \item Sample $n=1000$ entries without replacement \pause
-    \item Plot the histogram of the sampling distribution of $\hat{p}$
-    \item Compute the sample mean $x_{\hat{p}}$
-    \item Compute the standard deviation $s_{\hat{p}}$ (called the \textbf{standard error} $SE_{\hat{p}}$).
-    \item Investigate what happens as $n$ increases.
-    \end{enumerate}
-  \end{exampleblock}
+%     \begin{enumerate}[\bf (a)]
+%     \item  Create a set of a large number of entries (e.g.\ 30,000) where 88\% are in support and 12\% are not.\pause
+%     \item Sample $n=1000$ entries without replacement \pause
+%     \item Plot the histogram of the sampling distribution of $\hat{p}$
+%     \item Compute the sample mean $x_{\hat{p}}$
+%     \item Compute the standard deviation $s_{\hat{p}}$ (called the \textbf{standard error} $SE_{\hat{p}}$).
+%     \item Investigate what happens as $n$ increases.
+%     \end{enumerate}
+%   \end{exampleblock}
   
-\end{frame}
+% \end{frame}
 
 
 
@@ -926,27 +926,13 @@ Lecture M4a: Point Estimates, Sampling Variability and Central Limit Theorem}
 One rule of thumb for determining whether $n$ is large enough is to check that both $np$ and $n(1-p)$ are $\ge 10$ (also known as the success-failure condition).
 \end{frame}
 
-\begin{frame}
-  \frametitle{Success-failure condition}
-  \pause
-  In the case of a proportion $p$, the CLT holds only if: \pause
-  \begin{itemize}
-  \item The observations are independent (i.e.\ random) \pause
-  \item The sample size $n$ is \textbf{sufficiently large}
-  \end{itemize}
-  \pause
-  The second condition is typically observed via the \textbf{success-failure condition}, i.e.:\pause
-  \begin{eqnarray}
-    np &\geq& 10 \\\pause
-    n(1-p) &\geq& 10
-  \end{eqnarray}
-\end{frame}
+
 
 \begin{frame}
   \frametitle{CLT application: sample proportion}
   \pause
 
-  \begin{exampleblock}{Example 3: Solar energy expansion (CLT)}
+  \begin{exampleblock}{Example 2: Solar energy expansion (CLT)}
     Suppose the proportion of American adults who support the expansion of solar energy is $p = 0.88$, which is our
     parameter of interest. \pause If we were to take a poll of 1000 American adults on this topic, the estimate would not be
     perfect, but how close might we expect the sample proportion in the poll would be to 88\%? 
@@ -969,7 +955,7 @@ One rule of thumb for determining whether $n$ is large enough is to check that b
     \item First, we note that the response of each American adult in the entire population is part of a Bernoulli
       sequence with $p=0.88$.  According to the CLT, the distribution of $\hat p$ (sample proportion) is normal/Gaussian. We can denote this as:
       \begin{equation}
-        \hat p \sim \mathcal{N}\lt(p, \fr{\sigma^{2}}{n}\rt) \text{ OR } \mathcal{N}\lt(\mu_{p}, \fr{\sigma^{2}_{p}}{n}\rt)
+        \hat p \sim \mathcal{N}\lt(p, SE^2_{\hat p}\rt) \text{ OR } \mathcal{N}\lt(\mu_{p}, \fr{\sigma^{2}_{p}}{n}\rt)
       \end{equation}
     \end{enumerate}
     \pause
@@ -1018,7 +1004,7 @@ One rule of thumb for determining whether $n$ is large enough is to check that b
 \node[green!50!black, font=\small] at (axis cs:0.85,22) {within $\pm 1SE$};
 
 % Theoretical foundation
-\node[font=\tiny] at (axis cs:0.915,40) {By CLT: $\hat{p} \approx N\left(p, \sqrt{\frac{p(1-p)}{n}}\right)$};
+\node[font=\footnotesize] at (axis cs:0.915,40) {By CLT: $\hat{p} \approx N\left(p, \sqrt{\frac{p(1-p)}{n}}\right)$};
 
 \end{axis}
 \end{tikzpicture}
@@ -1106,7 +1092,7 @@ One rule of thumb for determining whether $n$ is large enough is to check that b
 
 \begin{frame}
   \frametitle{Another application of the CLT}
-  \begin{exampleblock}{Example 4: Mean batch weight} %4.24
+  \begin{exampleblock}{Example 3: Mean batch weight} %4.24
     A certain brand of cement is shipped in batches of 40 bags. Previous records
     indicate the weight of a randomly selected bag of this brand has a mean of
     2.5 kg and an SD of 0.1 kg. The exact distribution is unknown.\pause
@@ -1143,6 +1129,22 @@ One rule of thumb for determining whether $n$ is large enough is to check that b
   \end{exampleblock}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Success-failure condition}
+  \pause
+  In the case of a proportion $p$, the CLT holds only if: \pause
+  \begin{itemize}
+  \item The observations are independent (i.e.\ random) \pause
+  \item The sample size $n$ is \textbf{sufficiently large}
+  \end{itemize}
+  \pause
+  The second condition is typically observed via the \textbf{success-failure condition}, i.e.:\pause
+  \begin{eqnarray}
+    np &\geq& 10 \\\pause
+    n(1-p) &\geq& 10
+  \end{eqnarray}
+\end{frame}
+
 \section{Outlook}
 \begin{frame}
   \frametitle{Summary}
@@ -1152,6 +1154,31 @@ One rule of thumb for determining whether $n$ is large enough is to check that b
   \item When $n$ is sufficiently large and observations are independent, the sample proportion (or other parameter) follows a normal distribution
     \item The success-failure condition can be used to determine if $n$ is large enough for the CLT to hold (for a sample proportion)
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{CLT}
+
+    If $n$ is sufficiently large for \textbf{any} sample: \pause
+  \begin{eqnarray}
+    \ol{X} &\sim& \pause \mathcal{N}\lt(\mu, \fr{\sigma^{2}}{n}\rt) \\\pause
+    S_{n} &\sim& \pause \mathcal{N}(n\mu, n\sigma^{2}) 
+  \end{eqnarray}
+
+  \pause
+  For proportions:
+    \begin{block}{}
+    \begin{equation}
+    \hat p \sim \mathcal{N}(\mu_{\hat p}, SE^{2}_{\hat p}) = \mathcal{N}\lt( p, \fr{p(1-p)}{n}\rt)
+  \end{equation}
+  where
+  \begin{eqnarray*}
+  \text{Sample mean proportion: }  \mu_{\hat p} &=& p \\ \pause
+    \text{Sampling error/standard error of $\hat p$: }    SE_{\hat p} &=& \sqrt{\fr{p (1- p)}{n}}
+    \approx \sqrt{\fr{\hat p (1- \hat p)}{n}}
+  \end{eqnarray*}
+\end{block}
+
 \end{frame}
 
 % \appendix

@@ -6,7 +6,8 @@ Thu, Oct 22
 : **LECTURE 4A**{: .label .label-blue }[Point Estimates](/assets/lectures/M4-Inference-Foundations/M4a-Point-Estimates-Handout.pdf)
 : **PROBLEM SET 6**{: .label .label-red}[*FORTHCOMING*](#)  **(Due Fri 10/30)** 
 : **LAB 6**{: .label .label-orange}[*FORTHCOMING*](#) **(Due Fri 10/30)**
-: **ACTIVITY 4A**{: .label .label-activity}[*FORTHCOMING*](#)
+: **ACTIVITY 4A**{: .label .label-activity}[4A-i (Single Die Roll)](https://forms.gle/ikLCmcDNhZbw9p2p6), [4A-ii (Multiple Die Roll)](https://forms.gle/PMhtZ9ZHVhR6KMRn6), [4A-iii (Laptop OS)](https://forms.gle/N9hfRyZfMh8Wd7Ne9)
+: **NOTEBOOK 4A**{: .label .label-notebook}[CLT](https://colab.research.google.com/drive/1rHCCle0i65g78kyDl4wtzCnY5hPfueso?usp=sharing)
 
 Tue, Oct 27
 : **LECTURE 4B**{: .label .label-blue }[*FORTHCOMING*](#)
