@@ -15,7 +15,7 @@ Tue, Oct 27
 
 Thu, Oct 29
 : **LECTURE 4C**{: .label .label-blue }[Confidence Intervals for a Proportion](/assets/lectures/M4-Inference-Foundations/M4c-Confidence-Intervals-for-Proportion-Handout.pdf)
-: **ACTIVITY 4C**{: .label .label-activity}[*FORTHCOMING*](https://umamherst.instructure.com/courses/42166)
+: **ACTIVITY 4C**{: .label .label-activity}[Drivers Yielding at Crosswalks](https://docs.google.com/forms/d/e/1FAIpQLSfexQ86gLqV1fcf1C5aDEgPjApmGUEOKQWueu5r5pzqabQeUw/viewform?usp=dialog)
 : **NOTEBOOK 4C**{: .label .label-notebook}[*FORTHCOMING*](https://colab.research.google.com/drive/1sBWVRilri3bHw0tmmRnyZ4ESVIOge6zg?usp=sharing)  
 
 Thu, Nov 5
