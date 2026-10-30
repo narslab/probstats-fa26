@@ -24,7 +24,7 @@ All submissions are via Gradescope.
 | PS 5  | Tue, Oct 13 | **Wed, Oct 14 — 11:59pm** |
 | LAB 5 | Tue, Oct 13 | **Wed, Oct 14 — 11:59pm** |
 | PS 6  | Thu, Oct 29 | **Fri, Oct 30 — 11:59pm** |
-| LAB 6 | Thu, Oct 29 | **Tue, Nov 3 — 11:59pm**  |
+| LAB 6 | Thu, Oct 29 | **Thu, Nov 5 — 11:59pm**  |
 | PS 7  | Tue, Nov 10 | **Thu, Nov 12 — 11:59pm** |
 | LAB 7 | Tue, Nov 10 | **Thu, Nov 12 — 11:59pm** |
 | PS 8  | Tue, Nov 17 | **Wed, Nov 18 — 11:59pm** |
