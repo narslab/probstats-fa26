@@ -11,7 +11,7 @@ Thu, Oct 22
 
 Tue, Oct 27
 : **LECTURE 4B**{: .label .label-blue }[Sampling Variability and Central Limit Theorem](/assets/lectures/M4-Inference-Foundations/M4b-Sampling-Variability-CLT-Handout.pdf)
-: **ACTIVITY 4B**{: .label .label-activity}[*FORTHCOMING*](https://umamherst.instructure.com/courses/42166)
+: **ACTIVITY 4B**{: .label .label-activity}[Gradescope](https://www.gradescope.com/courses/1389916/assignments/8951754/)
 
 Thu, Oct 29
 : **LECTURE 4C**{: .label .label-blue }[Confidence Intervals for a Proportion](/assets/lectures/M4-Inference-Foundations/M4c-Confidence-Intervals-for-Proportion-Handout.pdf)
