@@ -10,7 +10,7 @@ Thu, Oct 22
 : **NOTEBOOK 4A**{: .label .label-notebook}[CLT](https://colab.research.google.com/drive/1rHCCle0i65g78kyDl4wtzCnY5hPfueso?usp=sharing)
 
 Tue, Oct 27
-: **LECTURE 4B**{: .label .label-blue }[*FORTHCOMING*](#)
+: **LECTURE 4B**{: .label .label-blue }[Sampling Variability and Central Limit Theorem](/assets/lectures/M4-Inference-Foundations/M4b-Sampling-Variability-CLT-Handout.pdf)
 : **ACTIVITY 4B**{: .label .label-activity}[*FORTHCOMING*](https://umamherst.instructure.com/courses/42166)
 
 Thu, Oct 29
