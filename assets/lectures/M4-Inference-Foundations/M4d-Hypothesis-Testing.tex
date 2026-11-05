@@ -1183,7 +1183,7 @@ Lecture M4d: Hypothesis Testing and p-values}
     \begin{itemize}
     \item Upper-tailed test: $p-\text{value} = 1- \Phi(z)$; \pause Python: \texttt{1 - norm.cdf(z)} \pause
     \item Lower-tailed test: $p-\text{value} = \Phi(z)$; \pause Python: \texttt{norm.cdf(z)} \pause
-    \item Two-tailed test: $p-\text{value} = 2(1- \Phi(|z|))$; \pause Python: \texttt{2 * norm.cdf(abs(z))} \pause
+    \item Two-tailed test: $p-\text{value} = 2(1- \Phi(|z|))$; \pause Python: \texttt{2 * (1 - norm.cdf(abs(z)))} \pause
     \end{itemize}
   \end{itemize}
 \end{frame}
