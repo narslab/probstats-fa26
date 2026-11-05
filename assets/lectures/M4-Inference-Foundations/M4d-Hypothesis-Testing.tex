@@ -328,7 +328,7 @@ eprint=false]{biblatex}
 
 \title[CEE 260/MIE 273 M4d: Hypothesis Testing]{{\normalsize CEE 260/MIE 273: Probability and Statistics in Civil Engineering} \\
 Lecture M4d: Hypothesis Testing and p-values}
-\date[\today]{\footnotesize \today}
+\date[November 5, 2026]{\footnotesize November 5, 2026}
 \author{{\bf Jimi Oke}}
 \institute[UMass Amherst]{
   \begin{tikzpicture}[baseline=(current bounding box.center)]
@@ -1181,9 +1181,9 @@ Lecture M4d: Hypothesis Testing and p-values}
 
   \item The $p$-value is the minimum probability of a Type I error.\pause
     \begin{itemize}
-    \item Upper-tailed test: $p-\text{value} = 1- \Phi(z)$; \pause MATLAB: \texttt{normcdf(z, 'upper')} \pause
-    \item Lower-tailed test: $p-\text{value} = \Phi(z)$; \pause MATLAB: \texttt{normcdf(z)} \pause
-    \item Two-tailed test: $p-\text{value} = 2(1- \Phi(|z|))$; \pause MATLAB: \texttt{2 * normcdf(abs(z))} \pause
+    \item Upper-tailed test: $p-\text{value} = 1- \Phi(z)$; \pause Python: \texttt{1 - norm.cdf(z)} \pause
+    \item Lower-tailed test: $p-\text{value} = \Phi(z)$; \pause Python: \texttt{norm.cdf(z)} \pause
+    \item Two-tailed test: $p-\text{value} = 2(1- \Phi(|z|))$; \pause Python: \texttt{2 * norm.cdf(abs(z))} \pause
     \end{itemize}
   \end{itemize}
 \end{frame}
