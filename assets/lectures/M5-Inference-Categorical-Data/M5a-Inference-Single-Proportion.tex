@@ -390,15 +390,13 @@ Lecture 5A: Inference for Single Proportion}
 
   \item $n(1-p) \geq 10 $
 \end{itemize}
+\pause
 
-\end{frame}
-
-\begin{frame}
-  \frametitle{Example 1}
-  \pause
+\begin{alertblock}{Question}
   A simple random sample of 826 payday loan borrowers was surveyed to better understand their
 interests around regulation and costs. 70\% of the responses supported new regulations on payday
 lenders. Is it reasonable to model $\hat{p}$ = 0.70 using a normal distribution?
+\end{alertblock}
 \end{frame}
 
 \section{CI for  proportion}
@@ -1320,7 +1318,7 @@ p\text{-value} &=& 1 - \Phi(1.88)  \quad
     height=5cm, 
     width=10cm,
     xtick={0, 1.644, 1.875},
-    xticklabels={$0$, $1.64$, $1.88$},
+    xticklabels={$0$, $\,$ , $1.88$},
     ymax=0.45,
     ytick=\empty,
     x label style={anchor=west},
@@ -1337,8 +1335,8 @@ p\text{-value} &=& 1 - \Phi(1.88)  \quad
 % p-value region (right tail for one-sided test)
 \only<+->{\addplot [red!40, fill=red!40, domain=1.644:4] {gauss(0, 1)} \closedcycle;}
 
-\only<+->{\addplot [red] coordinates {(1.644, 0) (1.644, 0.1)};}
-\node<+-> at (axis cs: 2.5, 0.08) {\textcolor{red}{\footnotesize $\alpha = 0.05$}};
+\only<+->{\addplot [red] coordinates {(1.644, 0) (1.644, 0.2)};}
+\node<+-> at (axis cs: 2.5, 0.15) {\textcolor{red}{\footnotesize $\alpha = 0.05$}};
 
 \only<+->{\addplot [purple!40, fill=orange!40, domain=1.875:4] {gauss(0, 1)} \closedcycle;}
 
