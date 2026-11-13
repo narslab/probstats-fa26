@@ -5,7 +5,7 @@ title: Module 5 Inference for Categorical Data
 Tue, Nov 10
 : **LECTURE 5A**{: .label .label-blue }[Inference for Single Proportion](/assets/lectures/M5-Inference-Categorical-Data/M5a-Inference-Single-Proportion_Handout.pdf)
 : **ACTIVITY 5A**{: .label .label-activity}[Hypothesis Testing](https://claude.ai/public/artifacts/8e250210-d989-4ed3-97d2-477f7494b16b) [Responses](https://docs.google.com/spreadsheets/d/1nh9almyo7gRzvdE94Ka9HPZhR5ouTWnhTnkzVvzZ8lM/edit?resourcekey=&gid=212466671#gid=212466671)
-: **PROBLEM SET 8**{: .label .label-red}[*FORTHCOMING*](#)  **(Due Wed 11/18)** 
+: **PROBLEM SET 8**{: .label .label-red}[PDF](/assets/problem-sets/PS8.pdf), [LaTeX](/assets/problem-sets/PS8.tex)  **(Due Wed 11/18)** 
 : **LAB 8**{: .label .label-orange}[*FORTHCOMING*](#) **(Due Wed 11/18)**
 
 
