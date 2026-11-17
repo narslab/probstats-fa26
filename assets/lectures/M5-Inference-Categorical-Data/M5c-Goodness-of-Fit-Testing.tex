@@ -387,7 +387,7 @@ Lecture M5c: Goodness of Fit Testing; Chi-square}
   \bigskip
 
   {\bf Scenario 2:} \\ \pause
-  You want to create a focus group for a study which is representative of demographic groups of interest (e.g.\ income, race/ethnicity, education level, major, etc.) How would you evaluate whether your sample is representative/balanced or biased toward a certain group? \pause
+  You want to create a focus group for a bike study which is representative of various groups of interest (e.g.\ commuters, leisure riders, safety-aware, etc). How would you evaluate whether your sample is balanced or biased toward a certain group? \pause
 
   \begin{tabular}{c c c c c c}\toprule
     Group & A & B & C & D & Total \\\midrule
@@ -631,7 +631,7 @@ and so on, then it turns out that $\chi^2$ follows a special distribution called
 	  \end{tikzpicture}    	
 	\end{minipage}
 	\begin{minipage}{.45\textwidth}
-		The critical value is $\chi^2_{1-\alpha,k}$ (\texttt{chi2inv(1 - alpha, nu)}). \pause
+		The critical value is $\chi^2_{1-\alpha,k}$ (\texttt{chi2.ppf(1 - alpha, nu)}). \pause
 		\begin{itemize}
 			\item If $\chi^2 > \chi^2_{1-\alpha,k}$, {\bf reject null hypothesis} \pause
 			\item If $\chi^2 \leq \chi^2_{1-\alpha,k}$, {\bf fail to reject null hypothesis}
@@ -777,7 +777,7 @@ and so on, then it turns out that $\chi^2$ follows a special distribution called
 
     Let us choose $\alpha = 0.05$. \pause The critical value is given by:\pause
     \begin{equation*}
-      \chi^2_{0.95,4} =  {\og \mathtt{chi2inv(.95, 4)}} = 9.4877
+      \chi^2_{0.95,4} =  {\og \mathtt{chi2.ppf(.95, 4)}} = 9.4877
     \end{equation*}
 
     \pause
@@ -842,7 +842,7 @@ and so on, then it turns out that $\chi^2$ follows a special distribution called
     We can increase $\alpha$ further and try $\alpha = 0.10$. Thus: \pause
 
     \begin{equation*}
-      \chi^2_{0.90,4} = {\og \mathtt{chi2inv(.9, 4)}} =  7.7794
+      \chi^2_{0.90,4} = {\og \mathtt{chi2.ppf(.9, 4)}} =  7.7794
     \end{equation*}
     \pause
 	\begin{minipage}{.5\textwidth}
@@ -905,7 +905,7 @@ and so on, then it turns out that $\chi^2$ follows a special distribution called
 	\frametitle{Working with the chi-square distribution (cont.)}
 	\begin{exampleblock}{Example 3: $p$-value (cont.)}\pause
   
-		We can also see that $\chi^2_{.8,4} = {\og \mathtt{chi2inv(.8, 4)}} = 5.9886$. \pause This is evidence that the $p$-value is not greater than 0.20. \pause
+		We can also see that $\chi^2_{.8,4} = {\og \mathtt{chi2.ppf(.8, 4)}} = 5.9886$. \pause This is evidence that the $p$-value is not greater than 0.20. \pause
 
 		\begin{minipage}{.55\textwidth}
 		\begin{tikzpicture}[scale=.7,
@@ -951,7 +951,7 @@ and so on, then it turns out that $\chi^2$ follows a special distribution called
 		  \end{tikzpicture}
 		\end{minipage}		\pause
 		  \begin{minipage}{.4\textwidth}
-			From MATLAB, we find that the $p$-value is given by \texttt{chi2cdf(7.5,4,'upper')}:\pause
+			From Python, we find that the $p$-value is given by \texttt{chi2.sf(7.5, 4)}:\pause
 			\begin{equation*}
 			  F(\chi^2,k) = F(7.5, 4) = \boxed{0.1117}
 			\end{equation*}		
@@ -1188,11 +1188,10 @@ and so on, then it turns out that $\chi^2$ follows a special distribution called
     \item In your group, count the following:
     \begin{itemize}
       \item number of CEE majors ($\hat{n}_A$)
-      \item number of ME majors ($\hat{n}_B$)
-      \item number of IE majors ($\hat{n}_C$)
-      \item number of Other majors ($\hat{n}_D$)
+      \item number of MIE majors ($\hat{n}_B$)
+      \item number of Other majors ($\hat{n}_C$)
     \end{itemize}
-    \item Goal: test whether the distribution of majors in your sample (group) is representative of the expected (true) counts ($n_A, n_B, n_C, n_D$) based on the proportions obtained from the class-wide survey you just completed.
+    \item Goal: test whether the distribution of majors in your sample (group) is representative of the expected (true) counts ($n_A, n_B, n_C$) based on the proportions obtained from the class-wide survey you just completed.
   \end{itemize}
 
   
@@ -1205,7 +1204,7 @@ and so on, then it turns out that $\chi^2$ follows a special distribution called
 	\item The $\chi^2$ distribution has a single parameter $k$ (degrees of freedom)
 	\item It is the underlying the distribution for chi-square tests, which are used to evaluate whether observed data fit a given distribution (or that proportions/frequencies observed from a sample follow a theoretical model/assumption).
 	\item Critical value: $\chi^2_{1-\alpha, k} \equiv \pythoninline{chi2.ppf(1-alpha, k)}$
-	\item p-value: \pythoninline{chi2.cdf(test, k)}
+	\item p-value: \pythoninline{chi2.sf(test, k)}
 	\item When given a one-way table, the test statistic $\chi^2$ is computed as
  \begin{equation}
 	\chi^2 = \sum_{i=1}^G \fr{(o_i - e_i)^2}{e_i}, \quad k = G - 1
